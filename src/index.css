@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background: #efe4cc;
+    --color-secondary: #e3d2b0;
+    --color-accent: #b5843a;
+    --color-text: #1a1a1a;
+    --color-border: #cbb89a;
+
+    --font-heading: "Bebas Neue", sans-serif;
+    --font-body: "Cormorant Garamond", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
