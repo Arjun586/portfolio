@@ -46,10 +46,10 @@ export function FooterSection({ quote }: FooterSectionProps = {}) {
             <div className="flex items-center gap-4 px-6 py-5 xl:px-8 xl:py-6">
                 <BuildingSketch />
                 <div>
-                    <p className="font-heading text-lg leading-tight tracking-wide xl:text-xl">
+                    <p className="font-heading text-subheading leading-tight tracking-wide xl:text-card-title">
                         {displayQuote.text}
                     </p>
-                    <p className="mt-1 text-sm italic">
+                    <p className="mt-1 text-small italic">
                         — {displayQuote.author}
                     </p>
                 </div>
@@ -59,13 +59,13 @@ export function FooterSection({ quote }: FooterSectionProps = {}) {
                 id="experience"
                 className="flex flex-col justify-center px-6 py-5 xl:px-8 xl:py-6"
             >
-                <h2 className="font-heading text-xl tracking-wide xl:text-2xl">
+                <h2 className="font-heading text-card-title tracking-wide">
                     {footerCta.title}
                 </h2>
-                <p className="mt-2 max-w-lg text-sm leading-snug">
+                <p className="mt-2 max-w-lg text-small leading-snug">
                     {footerCta.description}
                 </p>
-                <button className="mt-4 inline-flex w-fit items-center gap-2 bg-accent px-6 py-2 font-heading text-sm tracking-wide text-background transition-opacity hover:opacity-90 xl:text-base">
+                <button className="mt-4 inline-flex w-fit items-center gap-2 bg-accent px-6 py-2 font-heading text-small tracking-wide text-background transition-opacity hover:opacity-90 xl:text-body">
                     GET IN TOUCH
                     <span>→</span>
                 </button>
@@ -73,7 +73,7 @@ export function FooterSection({ quote }: FooterSectionProps = {}) {
 
             <div
                 id="contact"
-                className="flex flex-col justify-center gap-3 px-6 py-5 font-heading text-sm tracking-wide xl:px-8 xl:py-6 xl:text-base"
+                className="flex flex-col justify-center gap-3 px-6 py-5 font-heading text-small tracking-wide xl:px-8 xl:py-6 xl:text-body"
             >
                 <div className="flex items-center gap-3">
                     <Mail size={16} className="shrink-0" />

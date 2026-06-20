@@ -19,12 +19,8 @@ function DriveIcon({ type }: { type: (typeof drives)[number]["icon"] }) {
 export function AboutMiddleSection() {
     return (
         <section className="grid grid-cols-1 border-b border-border lg:grid-cols-3 lg:divide-x lg:divide-border">
-            {/* My Journey */}
             <div className="px-6 py-6 xl:px-8 xl:py-8">
-                <h2
-    className="font-heading tracking-wide"
-    style={{ fontSize: "var(--text-section)" }}
->
+                <h2 className="font-heading text-section tracking-wide">
                     MY JOURNEY
                 </h2>
 
@@ -34,15 +30,13 @@ export function AboutMiddleSection() {
                     {journey.map((item) => (
                         <div key={item.period} className="relative">
                             <div className="absolute top-1.5 -left-5 h-2.5 w-2.5 rounded-full bg-text" />
-                            <p className="font-heading text-xs tracking-wide text-accent xl:text-sm">
+                            <p className="font-heading text-caption tracking-wide text-accent">
                                 {item.period}
                             </p>
-                            <h3 className="font-heading mt-1 text-base tracking-wide xl:text-lg">
+                            <h3 className="font-heading mt-1 text-body tracking-wide xl:text-subheading">
                                 {item.role}
                             </h3>
-                            <p className="mt-1 leading-relaxed" 
-                                style={{ fontSize: "var(--text-caption)" }}
-                                >
+                            <p className="mt-1 text-body leading-relaxed">
                                 {item.description}
                             </p>
                         </div>
@@ -50,12 +44,8 @@ export function AboutMiddleSection() {
                 </div>
             </div>
 
-            {/* What Drives Me */}
             <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
-                <h2
-    className="font-heading tracking-wide"
-    style={{ fontSize: "var(--text-section)" }}
->
+                <h2 className="font-heading text-section tracking-wide">
                     WHAT DRIVES ME
                 </h2>
 
@@ -66,10 +56,10 @@ export function AboutMiddleSection() {
                                 <DriveIcon type={item.icon} />
                             </div>
                             <div>
-                                <h3 className="font-heading text-base tracking-wide xl:text-lg">
+                                <h3 className="font-heading text-body tracking-wide xl:text-subheading">
                                     {item.title}
                                 </h3>
-                                <p className="mt-1 text-sm leading-relaxed">
+                                <p className="mt-1 text-body leading-relaxed">
                                     {item.description}
                                 </p>
                             </div>
@@ -78,30 +68,26 @@ export function AboutMiddleSection() {
                 </div>
             </div>
 
-            {/* My Approach */}
             <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
-                <h2
-    className="font-heading tracking-wide"
-    style={{ fontSize: "var(--text-section)" }}
->
+                <h2 className="font-heading text-section tracking-wide">
                     MY APPROACH
                 </h2>
 
-                <p className="mt-5 text-sm leading-relaxed xl:text-base">
+                <p className="mt-5 text-body leading-relaxed">
                     {approachIntro}
                 </p>
 
                 <div className="mt-6 space-y-5">
                     {approachSteps.map((step) => (
                         <div key={step.number} className="flex gap-3">
-                            <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-accent bg-secondary/50 font-heading text-sm text-accent">
+                            <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-accent bg-secondary/50 font-heading text-small text-accent">
                                 {step.number}
                             </span>
                             <div>
-                                <h3 className="font-heading text-base tracking-wide xl:text-lg">
+                                <h3 className="font-heading text-body tracking-wide xl:text-subheading">
                                     {step.title}
                                 </h3>
-                                <p className="mt-0.5 text-sm leading-relaxed">
+                                <p className="mt-0.5 text-body leading-relaxed">
                                     {step.description}
                                 </p>
                             </div>

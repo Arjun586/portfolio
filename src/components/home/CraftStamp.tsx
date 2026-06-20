@@ -30,7 +30,7 @@ export function CraftStamp({ style }: { style?: CSSProperties }) {
                         </textPath>
                     </text>
                 </svg>
-                <span className="font-heading text-2xl font-bold text-text xl:text-3xl">
+                <span className="font-heading text-card-title font-bold text-text xl:text-section">
                     ★
                 </span>
             </div>

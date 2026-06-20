@@ -67,7 +67,7 @@ function SkillCard({
     return (
         <div className="flex flex-col items-center gap-1.5 border border-text/25 bg-background/50 px-1 py-2.5">
             <SkillIcon type={icon} />
-            <span className="font-body text-center text-[0.6rem] font-bold leading-tight xl:text-[0.65rem]">
+            <span className="font-body text-center text-caption font-bold leading-tight">
                 {name}
             </span>
         </div>
@@ -80,7 +80,7 @@ function ToolsList({ items }: { items: readonly string[] }) {
             {items.map((item) => (
                 <li
                     key={item}
-                    className="border-b border-dashed border-text/30 py-2.5 font-heading text-xs tracking-wide last:border-b-0 xl:text-sm"
+                    className="border-b border-dashed border-text/30 py-2.5 font-heading text-caption tracking-wide last:border-b-0 xl:text-small"
                 >
                     {item}
                 </li>
@@ -95,7 +95,7 @@ export function SkillsGridSection() {
             <div className="px-6 py-6 xl:px-8 xl:py-8">
                 <div className="flex items-center gap-2">
                     <Code2 size={18} className="text-accent" />
-                    <h2 className="font-heading text-2xl tracking-wide xl:text-3xl">
+                    <h2 className="font-heading text-card-title tracking-wide xl:text-section">
                         FRONTEND
                     </h2>
                 </div>
@@ -114,7 +114,7 @@ export function SkillsGridSection() {
             <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
                 <div className="flex items-center gap-2">
                     <Database size={18} className="text-accent" />
-                    <h2 className="font-heading text-2xl tracking-wide xl:text-3xl">
+                    <h2 className="font-heading text-card-title tracking-wide xl:text-section">
                         BACKEND
                     </h2>
                 </div>
@@ -131,7 +131,7 @@ export function SkillsGridSection() {
 
                 <div className="mt-8 flex items-center gap-2">
                     <Database size={16} className="text-accent" />
-                    <h3 className="font-heading text-sm tracking-wide text-accent xl:text-base">
+                    <h3 className="font-heading text-small tracking-wide text-accent xl:text-body">
                         DATABASE
                     </h3>
                 </div>
@@ -150,7 +150,7 @@ export function SkillsGridSection() {
             <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
                 <div className="flex items-center gap-2">
                     <Wrench size={18} className="text-accent" />
-                    <h2 className="font-heading text-2xl tracking-wide xl:text-3xl">
+                    <h2 className="font-heading text-card-title tracking-wide xl:text-section">
                         TOOLS & OTHERS
                     </h2>
                 </div>

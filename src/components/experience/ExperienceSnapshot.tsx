@@ -26,10 +26,10 @@ export function ExperienceSnapshot() {
                     >
                         <Icon size={22} className="shrink-0 text-accent" />
                         <div>
-                            <p className="font-heading text-2xl leading-none xl:text-3xl">
+                            <p className="font-heading text-card-title leading-none xl:text-section">
                                 {stat.value}
                             </p>
-                            <p className="mt-1 font-heading text-[0.65rem] tracking-wide xl:text-xs">
+                            <p className="mt-1 font-heading text-caption tracking-wide">
                                 {stat.label}
                             </p>
                         </div>

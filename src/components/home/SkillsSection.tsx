@@ -22,10 +22,7 @@ const techIcons: Record<(typeof featuredTechStack)[number], IconType> = {
 export function SkillsSection() {
     return (
         <section id="skills" className="flex flex-col px-6 py-5 xl:px-8 xl:py-6">
-            <h2
-    className="font-heading tracking-wide"
-    style={{ fontSize: "var(--text-section)" }}
->
+            <h2 className="font-heading text-section tracking-wide">
                 SKILLS
             </h2>
 
@@ -38,7 +35,7 @@ export function SkillsSection() {
                             <div className="flex h-14 w-full items-center justify-center rounded-md border border-text/70 bg-background/40 xl:h-16">
                                 <Icon size={26} className="text-text" />
                             </div>
-                            <span className="font-body text-center text-[0.65rem] font-bold leading-tight xl:text-xs">
+                            <span className="font-body text-center text-caption font-bold leading-tight">
                                 {name}
                             </span>
                         </div>
@@ -46,7 +43,7 @@ export function SkillsSection() {
                 })}
             </div>
 
-            <Link to="/skills" className="link-arrow mt-5 text-sm xl:text-base">
+            <Link to="/skills" className="link-arrow mt-5 text-small xl:text-body">
                 SEE ALL SKILLS →
             </Link>
         </section>

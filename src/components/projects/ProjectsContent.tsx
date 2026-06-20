@@ -13,7 +13,7 @@ function ProjectCard({ project }: { project: Project }) {
     return (
         <article className="flex bg-background">
             <div className="relative w-[118px] shrink-0 sm:w-[128px] xl:w-[138px]">
-                <span className="absolute top-0 left-0 z-10 border border-text bg-secondary px-1.5 py-0.5 font-heading text-xs leading-none xl:text-sm">
+                <span className="absolute top-0 left-0 z-10 border border-text bg-secondary px-1.5 py-0.5 font-heading text-caption leading-none xl:text-small">
                     {project.number}
                 </span>
                 <div className="h-full min-h-[132px] xl:min-h-[148px]">
@@ -22,21 +22,21 @@ function ProjectCard({ project }: { project: Project }) {
             </div>
 
             <div className="flex min-w-0 flex-1 flex-col py-3 pl-3 pr-4 xl:py-4 xl:pl-4 xl:pr-5">
-                <h3 className="font-heading text-base leading-none tracking-wide xl:text-lg">
+                <h3 className="font-heading text-body leading-none tracking-wide xl:text-subheading">
                     {project.title}
                 </h3>
 
-                <span className="mt-1 font-heading text-[0.65rem] tracking-wide text-accent xl:text-xs">
+                <span className="mt-1 font-heading text-caption tracking-wide text-accent">
                     {project.category}
                 </span>
 
-                <p className="mt-1.5 text-[0.7rem] leading-snug xl:text-xs">
+                <p className="mt-1.5 text-caption leading-snug xl:text-small">
                     {project.description}
                 </p>
 
                 <a
                     href={project.url ?? "#"}
-                    className="link-arrow mt-auto pt-2 text-[0.65rem] xl:text-xs"
+                    className="link-arrow mt-auto pt-2 text-caption"
                 >
                     VIEW PROJECT →
                 </a>
@@ -57,7 +57,7 @@ export function ProjectsContent() {
     return (
         <>
             <div className="flex flex-col gap-3 border-b border-text px-6 py-3 lg:flex-row lg:items-center lg:justify-between xl:px-8 xl:py-4">
-                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-heading text-xs tracking-wide xl:text-sm">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-heading text-caption tracking-wide xl:text-small">
                     {projectFilters.map((filter, index) => (
                         <span key={filter.id} className="flex items-center gap-2">
                             {index > 0 && (
@@ -80,7 +80,7 @@ export function ProjectsContent() {
 
                 <button
                     type="button"
-                    className="flex items-center gap-1.5 font-heading text-xs tracking-wide xl:text-sm"
+                    className="flex items-center gap-1.5 font-heading text-caption tracking-wide xl:text-small"
                 >
                     SORT BY: LATEST
                     <ChevronDown size={14} />

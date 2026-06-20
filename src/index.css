@@ -9,6 +9,16 @@
 
     --font-heading: "Bebas Neue", sans-serif;
     --font-body: "Merriweather", serif;
+
+    /* Typography scale */
+    --text-display-xl: 7.5rem; /* 120px */
+    --text-display: 5rem; /* 80px */
+    --text-section: 3rem; /* 48px */
+    --text-card-title: 1.5rem; /* 24px */
+    --text-subheading: 1.125rem; /* 18px */
+    --text-body: 1rem; /* 16px */
+    --text-small: 0.875rem; /* 14px */
+    --text-caption: 0.75rem; /* 12px */
 }
 
 @utility font-heading {
@@ -20,25 +30,6 @@
 }
 
 
-
-/* Typography Scale */
-
-:root {
-    --text-display-xl: 7.5rem; /* 120px */
-    --text-display: 5rem; /* 80px */
-
-    --text-section: 3rem; /* 48px */
-
-    --text-card-title: 1.5rem; /* 24px */
-
-    --text-subheading: 1.125rem; /* 18px */
-
-    --text-body: 1rem; /* 16px */
-
-    --text-small: 0.875rem; /* 14px */
-
-    --text-caption: 0.75rem; /* 12px */
-}
 
 html {
     scroll-behavior: smooth;
@@ -60,6 +51,7 @@ body {
         url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
     color: var(--color-text);
     font-family: var(--font-body);
+    font-size: var(--text-body);
     overflow-x: hidden;
 }
 

@@ -18,7 +18,7 @@ export function Sidebar() {
                 <NavLink
                     to="/"
                     end
-                    className="font-heading text-[2.75rem] leading-[0.9] tracking-tight transition-opacity hover:opacity-70"
+                    className="font-heading text-section leading-[0.9] tracking-tight transition-opacity hover:opacity-70"
                 >
                     ARJUN
                 </NavLink>
@@ -37,10 +37,10 @@ export function Sidebar() {
                                 }`
                             }
                         >
-                            <span className="font-heading text-lg">
+                            <span className="font-heading text-subheading">
                                 {item.number}
                             </span>
-                            <span className="font-heading text-xl tracking-wide">
+                            <span className="font-heading text-card-title tracking-wide">
                                 {item.label}
                             </span>
                         </NavLink>

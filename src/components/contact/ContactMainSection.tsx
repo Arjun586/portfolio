@@ -30,10 +30,7 @@ export function ContactMainSection() {
     return (
         <section className="grid grid-cols-1 border-b border-border lg:grid-cols-3 lg:divide-x lg:divide-border">
             <div className="px-6 py-6 xl:px-8 xl:py-8">
-                <h2
-                    className="font-heading tracking-wide"
-                    style={{ fontSize: "var(--text-section)" }}
->
+                <h2 className="font-heading text-section tracking-wide">
                     SEND ME A MESSAGE
                 </h2>
 
@@ -42,49 +39,48 @@ export function ContactMainSection() {
                     onSubmit={(e) => e.preventDefault()}
                 >
                     <div>
-                        <label className="font-heading tracking-wide xl:text-sm"
-                        >
+                        <label className="font-heading text-small tracking-wide xl:text-body">
                             YOUR NAME
                         </label>
                         <input
                             type="text"
-                            className="mt-1.5 w-full border border-text/30 bg-background/60 px-3 py-2 font-body text-sm outline-none focus:border-accent"
+                            className="mt-1.5 w-full border border-text/30 bg-background/60 px-3 py-2 font-body text-small outline-none focus:border-accent"
                         />
                     </div>
 
                     <div>
-                        <label className="font-heading text-xs tracking-wide xl:text-sm">
+                        <label className="font-heading text-caption tracking-wide xl:text-small">
                             YOUR EMAIL
                         </label>
                         <input
                             type="email"
-                            className="mt-1.5 w-full border border-text/30 bg-background/60 px-3 py-2 font-body text-sm outline-none focus:border-accent"
+                            className="mt-1.5 w-full border border-text/30 bg-background/60 px-3 py-2 font-body text-small outline-none focus:border-accent"
                         />
                     </div>
 
                     <div>
-                        <label className="font-heading text-xs tracking-wide xl:text-sm">
+                        <label className="font-heading text-caption tracking-wide xl:text-small">
                             SUBJECT
                         </label>
                         <input
                             type="text"
-                            className="mt-1.5 w-full border border-text/30 bg-background/60 px-3 py-2 font-body text-sm outline-none focus:border-accent"
+                            className="mt-1.5 w-full border border-text/30 bg-background/60 px-3 py-2 font-body text-small outline-none focus:border-accent"
                         />
                     </div>
 
                     <div>
-                        <label className="font-heading text-xs tracking-wide xl:text-sm">
+                        <label className="font-heading text-caption tracking-wide xl:text-small">
                             YOUR MESSAGE
                         </label>
                         <textarea
                             rows={4}
-                            className="mt-1.5 w-full resize-none border border-text/30 bg-background/60 px-3 py-2 font-body text-sm outline-none focus:border-accent"
+                            className="mt-1.5 w-full resize-none border border-text/30 bg-background/60 px-3 py-2 font-body text-small outline-none focus:border-accent"
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className="inline-flex items-center gap-2 bg-accent px-6 py-2.5 font-heading text-sm tracking-wide text-background transition-opacity hover:opacity-90 xl:text-base"
+                        className="inline-flex items-center gap-2 bg-accent px-6 py-2.5 font-heading text-small tracking-wide text-background transition-opacity hover:opacity-90 xl:text-body"
                     >
                         SEND MESSAGE
                         <span>→</span>
@@ -93,10 +89,7 @@ export function ContactMainSection() {
             </div>
 
             <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
-                <h2
-    className="font-heading tracking-wide"
-    style={{ fontSize: "var(--text-section)" }}
->
+                <h2 className="font-heading text-section tracking-wide">
                     CONTACT DETAILS
                 </h2>
 
@@ -110,10 +103,10 @@ export function ContactMainSection() {
                                 <DetailIcon type={item.icon} />
                             </div>
                             <div>
-                                <p className="font-heading text-xs tracking-wide text-accent xl:text-sm">
+                                <p className="font-heading text-caption tracking-wide text-accent">
                                     {item.label}
                                 </p>
-                                <p className="mt-0.5 text-sm leading-snug">
+                                <p className="mt-0.5 text-body leading-snug">
                                     {item.value}
                                 </p>
                             </div>
@@ -123,10 +116,7 @@ export function ContactMainSection() {
             </div>
 
             <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
-                <h2
-    className="font-heading tracking-wide"
-    style={{ fontSize: "var(--text-section)" }}
->
+                <h2 className="font-heading text-section tracking-wide">
                     LET&apos;S CONNECT
                 </h2>
 
@@ -144,14 +134,14 @@ export function ContactMainSection() {
                             className="flex flex-col items-center gap-2 border border-text/50 bg-background/40 px-2 py-3 transition-opacity hover:opacity-70"
                         >
                             <SocialIcon type={link.icon} />
-                            <span className="font-heading text-[0.65rem] tracking-wide xl:text-xs">
+                            <span className="font-heading text-caption tracking-wide">
                                 {link.label}
                             </span>
                         </a>
                     ))}
                 </div>
 
-                <h3 className="font-heading mt-8 text-sm tracking-wide text-accent xl:text-base">
+                <h3 className="font-heading mt-8 text-small tracking-wide text-accent xl:text-body">
                     I&apos;M AVAILABLE FOR
                 </h3>
 
@@ -162,7 +152,9 @@ export function ContactMainSection() {
                                 size={16}
                                 className="mt-0.5 shrink-0 text-accent"
                             />
-                            <span className="text-sm leading-snug">{item}</span>
+                            <span className="text-body leading-snug">
+                                {item}
+                            </span>
                         </li>
                     ))}
                 </ul>

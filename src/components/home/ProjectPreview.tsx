@@ -66,7 +66,7 @@ export function ProjectPreview({ variant, className = "" }: ProjectPreviewProps)
                     </div>
                 </div>
                 <div className="absolute inset-x-0 bottom-0 px-3 pb-3">
-                    <p className="font-heading text-[0.55rem] leading-tight tracking-wide text-white/90 xl:text-[0.65rem]">
+                    <p className="font-heading text-caption leading-tight tracking-wide text-white/90">
                         WHERE IDEAS
                         <br />
                         TAKE FLIGHT
@@ -87,7 +87,7 @@ export function ProjectPreview({ variant, className = "" }: ProjectPreviewProps)
                 </div>
             </div>
             <div className="absolute top-[28%] left-[8%]">
-                <p className="font-heading text-[0.5rem] leading-tight tracking-wide text-white/80 xl:text-[0.6rem]">
+                <p className="font-heading text-caption leading-tight tracking-wide text-white/80">
                     DISCOVER
                     <br />
                     TIMELESS
@@ -112,7 +112,7 @@ export function ProjectPreview({ variant, className = "" }: ProjectPreviewProps)
                     <div className="h-1 w-10 bg-white/20" />
                 </div>
                 <div className="absolute top-[30%] left-[10%]">
-                    <p className="font-heading text-[0.55rem] tracking-wide text-white/90">
+                    <p className="font-heading text-caption tracking-wide text-white/90">
                         ARJUN DEV
                     </p>
                     <div className="mt-2 h-px w-12 bg-accent/60" />
@@ -133,7 +133,7 @@ export function ProjectPreview({ variant, className = "" }: ProjectPreviewProps)
                     <div className="h-10 border border-white/10 bg-[#2a2622]" />
                     <div className="h-10 border border-white/10 bg-[#2a2622]" />
                 </div>
-                <p className="absolute bottom-3 left-3 font-heading text-[0.5rem] tracking-wide text-white/70">
+                <p className="absolute bottom-3 left-3 font-heading text-caption tracking-wide text-white/70">
                     FIND YOUR HOME
                 </p>
             </div>

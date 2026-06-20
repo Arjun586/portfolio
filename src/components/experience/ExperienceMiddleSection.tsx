@@ -47,10 +47,7 @@ export function ExperienceMiddleSection() {
     return (
         <section className="grid grid-cols-1 border-b border-border lg:grid-cols-3 lg:divide-x lg:divide-border">
             <div className="px-6 py-6 xl:px-8 xl:py-8">
-                <h2
-    className="font-heading tracking-wide"
-    style={{ fontSize: "var(--text-section)" }}
->
+                <h2 className="font-heading text-section tracking-wide">
                     PROFESSIONAL JOURNEY
                 </h2>
 
@@ -60,13 +57,13 @@ export function ExperienceMiddleSection() {
                     {professionalJourney.map((item) => (
                         <div key={item.period} className="relative">
                             <div className="absolute top-1.5 -left-5 h-2.5 w-2.5 rounded-full bg-text" />
-                            <p className="font-heading text-xs tracking-wide text-accent xl:text-sm">
+                            <p className="font-heading text-caption tracking-wide text-accent">
                                 {item.period}
                             </p>
-                            <h3 className="font-heading mt-1 text-base tracking-wide xl:text-lg">
+                            <h3 className="font-heading mt-1 text-body tracking-wide xl:text-subheading">
                                 {item.role}
                             </h3>
-                            <p className="mt-1 text-sm leading-relaxed">
+                            <p className="mt-1 text-body leading-relaxed">
                                 {item.skills}
                             </p>
                         </div>
@@ -75,17 +72,14 @@ export function ExperienceMiddleSection() {
             </div>
 
             <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
-                <h2
-    className="font-heading tracking-wide"
-    style={{ fontSize: "var(--text-section)" }}
->
+                <h2 className="font-heading text-section tracking-wide">
                     TECH STACK IN PRACTICE
                 </h2>
 
                 <div className="mt-6 space-y-6">
                     {techStackGroups.map((group) => (
                         <div key={group.title}>
-                            <h3 className="font-heading text-sm tracking-wide text-accent xl:text-base">
+                            <h3 className="font-heading text-small tracking-wide text-accent xl:text-body">
                                 {group.title}
                             </h3>
                             <div
@@ -105,7 +99,7 @@ export function ExperienceMiddleSection() {
                                         <div className="flex h-11 w-full items-center justify-center rounded-sm border border-text/70 bg-background/40 xl:h-12">
                                             <TechIcon type={item.icon} />
                                         </div>
-                                        <span className="font-body text-center text-[0.6rem] font-bold leading-tight xl:text-[0.65rem]">
+                                        <span className="font-body text-center text-caption font-bold leading-tight">
                                             {item.name}
                                         </span>
                                     </div>
@@ -117,20 +111,17 @@ export function ExperienceMiddleSection() {
             </div>
 
             <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
-                <h2
-    className="font-heading tracking-wide"
-    style={{ fontSize: "var(--text-section)" }}
->
+                <h2 className="font-heading text-section tracking-wide">
                     HIGHLIGHTS
                 </h2>
 
                 <div className="mt-6 space-y-4">
                     {highlights.map((item) => (
                         <div key={item.number} className="flex gap-3">
-                            <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-accent bg-secondary/50 font-heading text-sm text-accent">
+                            <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-accent bg-secondary/50 font-heading text-small text-accent">
                                 {item.number}
                             </span>
-                            <p className="pt-1 text-sm leading-relaxed">
+                            <p className="pt-1 text-body leading-relaxed">
                                 {item.text}
                             </p>
                         </div>

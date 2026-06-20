@@ -9,21 +9,21 @@ export function ContactHero() {
             <CraftStamp style={{ left: "38%", top: "65%" }} />
 
             <div className="flex flex-col justify-center px-6 py-8 xl:px-10 xl:py-10">
-                <span className="font-body text-base text-accent italic xl:text-lg">
+                <span className="font-body text-body text-accent italic xl:text-subheading">
                     {contactHero.label}
                 </span>
 
-                <h1 className="font-heading text-[4.5rem] leading-[0.9] tracking-tight xl:text-[6.5rem]">
+                <h1 className="font-heading text-display leading-[0.9] tracking-tight xl:text-display-xl">
                     {contactHero.title}
                 </h1>
 
-                <h2 className="font-heading mt-2 text-2xl tracking-wide uppercase xl:text-3xl">
+                <h2 className="font-heading mt-2 text-card-title tracking-wide uppercase xl:text-section">
                     {contactHero.subtitle}
                 </h2>
 
                 <div className="mt-3 h-px w-full bg-text" />
 
-                <p className="mt-4 max-w-md text-base leading-relaxed xl:text-lg">
+                <p className="mt-4 max-w-md text-body leading-relaxed">
                     {contactHero.description}
                 </p>
             </div>
@@ -45,21 +45,21 @@ export function ContactHero() {
             </div>
 
             <div className="flex flex-col justify-center px-6 py-8 xl:px-10 xl:py-10">
-                <div className="font-heading text-6xl leading-none text-accent xl:text-8xl">
+                <div className="font-heading text-display leading-none text-accent xl:text-display-xl">
                     &ldquo;
                 </div>
 
-                <p className="font-heading mt-2 max-w-sm text-2xl leading-snug tracking-wide xl:text-3xl">
+                <p className="font-heading mt-2 max-w-sm text-card-title leading-snug tracking-wide xl:text-section">
                     {contactHero.quote}
                 </p>
 
-                <p className="mt-6 font-body text-3xl text-accent italic xl:mt-8 xl:text-4xl">
+                <p className="mt-6 font-body text-card-title text-accent italic xl:mt-8 xl:text-section">
                     Arjun Dev
                 </p>
 
                 <div className="mt-10 xl:mt-12">
                     <div className="mb-3 h-px w-full bg-text" />
-                    <div className="flex items-center justify-between font-heading text-base tracking-widest xl:text-lg">
+                    <div className="flex items-center justify-between font-heading text-body tracking-widest xl:text-subheading">
                         <span>BASED IN INDIA</span>
                         <MapPin size={18} />
                     </div>
