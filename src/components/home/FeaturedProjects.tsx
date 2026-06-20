@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { featuredProjects } from "../../data/projects";
-import { getPreviewVariant, ProjectPreview } from "./ProjectPreview";
+import { ProjectPreview } from "./ProjectPreview";
 
 export function FeaturedProjects() {
     return (
@@ -18,13 +18,13 @@ export function FeaturedProjects() {
             </div>
 
             <div className="mt-4 grid flex-1 grid-cols-3 gap-4 xl:mt-5 xl:gap-5">
-                {featuredProjects.map((project, index) => (
+                {featuredProjects.map((project) => (
                     <article key={project.title} className="flex min-w-0 flex-col">
-                        <div className="relative">
+                        <div className="relative h-[150px] xl:h-[175px]">
                             <span className="absolute -top-px -left-px z-10 border border-text bg-secondary px-2 py-0.5 font-heading text-sm leading-none xl:text-base">
                                 {project.number}
                             </span>
-                            <ProjectPreview variant={getPreviewVariant(index)} />
+                            <ProjectPreview variant={project.preview} />
                         </div>
 
                         <h3 className="font-heading mt-2.5 text-lg leading-none tracking-wide xl:mt-3 xl:text-xl">

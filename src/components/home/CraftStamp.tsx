@@ -1,8 +1,10 @@
-export function CraftStamp() {
+import type { CSSProperties } from "react";
+
+export function CraftStamp({ style }: { style?: CSSProperties }) {
     return (
         <div
             className="pointer-events-none absolute z-20 hidden lg:block"
-            style={{ left: "26%", top: "62%" }}
+            style={{ left: "26%", top: "62%", ...style }}
             aria-hidden
         >
             <div className="relative flex h-[110px] w-[110px] items-center justify-center rounded-full border border-text/70 bg-background/95 xl:h-[124px] xl:w-[124px]">

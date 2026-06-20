@@ -1,10 +1,21 @@
-import { PlaceholderPage } from "../components/layout/PlaceholderPage";
+import { Link } from "react-router-dom";
+import { FooterSection } from "../components/home/FooterSection";
+import { SkillsGridSection } from "../components/skills/SkillsGridSection";
+import { SkillsHero } from "../components/skills/SkillsHero";
+import { skillsFooterQuote } from "../data/skillsPage";
 
 export default function Skills() {
     return (
-        <PlaceholderPage
-            title="SKILLS"
-            description="This page will present my full technical stack, tools, and areas of expertise in more detail."
-        />
+        <>
+            <div className="border-b border-border px-6 py-5 lg:hidden">
+                <Link to="/" className="font-heading text-3xl leading-none">
+                    ARJUN
+                </Link>
+            </div>
+
+            <SkillsHero />
+            <SkillsGridSection />
+            <FooterSection quote={skillsFooterQuote} />
+        </>
     );
 }

@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { contact, footerCta, footerQuote } from "../../data/home";
 
 function BuildingSketch() {
@@ -30,17 +30,27 @@ function BuildingSketch() {
     );
 }
 
-export function FooterSection() {
+type FooterQuote = {
+    text: string;
+    author: string;
+};
+
+type FooterSectionProps = {
+    quote?: FooterQuote;
+};
+
+export function FooterSection({ quote }: FooterSectionProps = {}) {
+    const displayQuote = quote ?? footerQuote;
     return (
         <section className="grid grid-cols-1 divide-y divide-border lg:grid-cols-[1fr_1.5fr_1fr] lg:divide-x lg:divide-y-0">
             <div className="flex items-center gap-4 px-6 py-5 xl:px-8 xl:py-6">
                 <BuildingSketch />
                 <div>
                     <p className="font-heading text-lg leading-tight tracking-wide xl:text-xl">
-                        {footerQuote.text}
+                        {displayQuote.text}
                     </p>
                     <p className="mt-1 text-sm italic">
-                        — {footerQuote.author}
+                        — {displayQuote.author}
                     </p>
                 </div>
             </div>

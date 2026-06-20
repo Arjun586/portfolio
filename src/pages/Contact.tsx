@@ -1,10 +1,21 @@
-import { PlaceholderPage } from "../components/layout/PlaceholderPage";
+import { Link } from "react-router-dom";
+import { ContactHero } from "../components/contact/ContactHero";
+import { ContactMainSection } from "../components/contact/ContactMainSection";
+import { FooterSection } from "../components/home/FooterSection";
+import { contactFooterQuote } from "../data/contactPage";
 
 export default function Contact() {
     return (
-        <PlaceholderPage
-            title="CONTACT"
-            description="This page will provide ways to reach out, collaborate, and start a conversation about new opportunities."
-        />
+        <>
+            <div className="border-b border-border px-6 py-5 lg:hidden">
+                <Link to="/" className="font-heading text-3xl leading-none">
+                    ARJUN
+                </Link>
+            </div>
+
+            <ContactHero />
+            <ContactMainSection />
+            <FooterSection quote={contactFooterQuote} />
+        </>
     );
 }
