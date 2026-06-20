@@ -13,17 +13,26 @@ export function HeroSection() {
                     HELLO, I&apos;M
                 </span>
 
-                <h1 className="font-heading text-[4.5rem] leading-[0.9] tracking-tight xl:text-[6.5rem]">
+                <h1
+    className="font-heading leading-[0.9] tracking-tight"
+    style={{ fontSize: "var(--text-display)" }}
+>
                     ARJUN
                 </h1>
 
-                <h2 className="font-heading mt-2 text-2xl tracking-wide uppercase xl:text-3xl">
+                <h2
+    className="font-heading mt-2 tracking-wide uppercase"
+    style={{ fontSize: "var(--text-subheading)" }}
+>
                     FULL STACK DEVELOPER
                 </h2>
 
                 <div className="mt-3 h-px w-full bg-text" />
 
-                <p className="mt-4 max-w-md text-base leading-relaxed xl:text-lg">
+                <p
+    className="mt-4 max-w-md leading-relaxed"
+    style={{ fontSize: "var(--text-body)" }}
+>
                     {heroBio}
                 </p>
 

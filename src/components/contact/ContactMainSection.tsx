@@ -30,7 +30,10 @@ export function ContactMainSection() {
     return (
         <section className="grid grid-cols-1 border-b border-border lg:grid-cols-3 lg:divide-x lg:divide-border">
             <div className="px-6 py-6 xl:px-8 xl:py-8">
-                <h2 className="font-heading text-2xl tracking-wide xl:text-3xl">
+                <h2
+                    className="font-heading tracking-wide"
+                    style={{ fontSize: "var(--text-section)" }}
+>
                     SEND ME A MESSAGE
                 </h2>
 
@@ -39,7 +42,8 @@ export function ContactMainSection() {
                     onSubmit={(e) => e.preventDefault()}
                 >
                     <div>
-                        <label className="font-heading text-xs tracking-wide xl:text-sm">
+                        <label className="font-heading tracking-wide xl:text-sm"
+                        >
                             YOUR NAME
                         </label>
                         <input
@@ -89,7 +93,10 @@ export function ContactMainSection() {
             </div>
 
             <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
-                <h2 className="font-heading text-2xl tracking-wide xl:text-3xl">
+                <h2
+    className="font-heading tracking-wide"
+    style={{ fontSize: "var(--text-section)" }}
+>
                     CONTACT DETAILS
                 </h2>
 
@@ -116,7 +123,10 @@ export function ContactMainSection() {
             </div>
 
             <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
-                <h2 className="font-heading text-2xl tracking-wide xl:text-3xl">
+                <h2
+    className="font-heading tracking-wide"
+    style={{ fontSize: "var(--text-section)" }}
+>
                     LET&apos;S CONNECT
                 </h2>
 

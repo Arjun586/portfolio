@@ -21,7 +21,10 @@ export function AboutMiddleSection() {
         <section className="grid grid-cols-1 border-b border-border lg:grid-cols-3 lg:divide-x lg:divide-border">
             {/* My Journey */}
             <div className="px-6 py-6 xl:px-8 xl:py-8">
-                <h2 className="font-heading text-2xl tracking-wide xl:text-3xl">
+                <h2
+    className="font-heading tracking-wide"
+    style={{ fontSize: "var(--text-section)" }}
+>
                     MY JOURNEY
                 </h2>
 
@@ -37,7 +40,9 @@ export function AboutMiddleSection() {
                             <h3 className="font-heading mt-1 text-base tracking-wide xl:text-lg">
                                 {item.role}
                             </h3>
-                            <p className="mt-1 text-sm leading-relaxed">
+                            <p className="mt-1 leading-relaxed" 
+                                style={{ fontSize: "var(--text-caption)" }}
+                                >
                                 {item.description}
                             </p>
                         </div>
@@ -47,7 +52,10 @@ export function AboutMiddleSection() {
 
             {/* What Drives Me */}
             <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
-                <h2 className="font-heading text-2xl tracking-wide xl:text-3xl">
+                <h2
+    className="font-heading tracking-wide"
+    style={{ fontSize: "var(--text-section)" }}
+>
                     WHAT DRIVES ME
                 </h2>
 
@@ -72,7 +80,10 @@ export function AboutMiddleSection() {
 
             {/* My Approach */}
             <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
-                <h2 className="font-heading text-2xl tracking-wide xl:text-3xl">
+                <h2
+    className="font-heading tracking-wide"
+    style={{ fontSize: "var(--text-section)" }}
+>
                     MY APPROACH
                 </h2>
 
