@@ -13,41 +13,41 @@ const navItems = [
 
 export function Sidebar() {
     return (
-        <aside className="sticky top-0 hidden h-screen shrink-0 border-r border-border lg:block">
+        <aside className="sticky top-0 hidden h-screen w-[180px] shrink-0 border-r border-border-default lg:block">
             <div className="flex h-full flex-col px-6 py-8">
                 <NavLink
                     to="/"
                     end
-                    className="font-heading text-section leading-[0.9] tracking-tight transition-opacity hover:opacity-70"
+                    className="font-heading text-card-title leading-[0.9] tracking-tight transition-opacity hover:opacity-70"
                 >
                     ARJUN
                 </NavLink>
 
-                <div className="bg-border mt-8 ml-1 h-20 w-px shrink-0" />
+                <div className="mt-8 ml-0.5 h-16 w-px shrink-0 bg-border-default" />
 
-                <nav className="mt-8 flex-1 space-y-5">
+                <nav className="mt-8 flex-1 space-y-6">
                     {navItems.map((item) => (
                         <NavLink
                             key={item.number}
                             to={item.to}
                             end={item.to === "/"}
                             className={({ isActive }) =>
-                                `group flex items-center gap-3 transition-opacity hover:opacity-70 ${
+                                `group flex items-baseline gap-4 transition-opacity hover:opacity-70 ${
                                     isActive ? "text-accent" : "text-text"
                                 }`
                             }
                         >
-                            <span className="font-heading text-subheading">
+                            <span className="font-heading text-caption tabular-nums">
                                 {item.number}
                             </span>
-                            <span className="font-heading text-card-title tracking-wide">
+                            <span className="font-heading text-subheading tracking-wide">
                                 {item.label}
                             </span>
                         </NavLink>
                     ))}
                 </nav>
 
-                <div className="mt-auto ml-1 flex flex-col gap-5">
+                <div className="mt-auto flex flex-col gap-6 border-t border-border-subtle pt-8">
                     <a
                         href="https://github.com/Arjun586"
                         target="_blank"

@@ -65,7 +65,7 @@ function SkillCard({
     icon: SkillIconKey;
 }) {
     return (
-        <div className="flex flex-col items-center gap-1.5 border border-text/25 bg-background/50 px-1 py-2.5">
+        <div className="skill-card">
             <SkillIcon type={icon} />
             <span className="font-body text-center text-caption font-bold leading-tight">
                 {name}
@@ -76,11 +76,11 @@ function SkillCard({
 
 function ToolsList({ items }: { items: readonly string[] }) {
     return (
-        <ul className="space-y-0">
+        <ul>
             {items.map((item) => (
                 <li
                     key={item}
-                    className="border-b border-dashed border-text/30 py-2.5 font-heading text-caption tracking-wide last:border-b-0 xl:text-small"
+                    className="border-b border-dashed border-border-subtle py-4 font-heading text-small tracking-wide last:border-b-0"
                 >
                     {item}
                 </li>
@@ -91,16 +91,16 @@ function ToolsList({ items }: { items: readonly string[] }) {
 
 export function SkillsGridSection() {
     return (
-        <section className="grid grid-cols-1 border-b border-border lg:grid-cols-3 lg:divide-x lg:divide-border">
-            <div className="px-6 py-6 xl:px-8 xl:py-8">
-                <div className="flex items-center gap-2">
+        <section className="grid grid-cols-1 border-b border-border-default lg:grid-cols-3 lg:divide-x lg:divide-border-default">
+            <div className="pad-section xl:pad-section-lg">
+                <div className="flex items-center gap-4">
                     <Code2 size={18} className="text-accent" />
-                    <h2 className="font-heading text-card-title tracking-wide xl:text-section">
+                    <h2 className="font-heading text-section tracking-wide">
                         FRONTEND
                     </h2>
                 </div>
 
-                <div className="mt-5 grid grid-cols-3 gap-2">
+                <div className="mt-6 grid grid-cols-3 gap-4">
                     {frontendSkills.map((skill) => (
                         <SkillCard
                             key={skill.name}
@@ -111,15 +111,15 @@ export function SkillsGridSection() {
                 </div>
             </div>
 
-            <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
-                <div className="flex items-center gap-2">
+            <div className="border-t border-border-default pad-section lg:border-t-0 xl:pad-section-lg">
+                <div className="flex items-center gap-4">
                     <Database size={18} className="text-accent" />
-                    <h2 className="font-heading text-card-title tracking-wide xl:text-section">
+                    <h2 className="font-heading text-section tracking-wide">
                         BACKEND
                     </h2>
                 </div>
 
-                <div className="mt-5 grid grid-cols-3 gap-2">
+                <div className="mt-6 grid grid-cols-3 gap-4">
                     {backendSkills.map((skill) => (
                         <SkillCard
                             key={skill.name}
@@ -129,14 +129,14 @@ export function SkillsGridSection() {
                     ))}
                 </div>
 
-                <div className="mt-8 flex items-center gap-2">
+                <div className="mt-8 flex items-center gap-4">
                     <Database size={16} className="text-accent" />
-                    <h3 className="font-heading text-small tracking-wide text-accent xl:text-body">
+                    <h3 className="font-heading text-subheading tracking-wide text-accent">
                         DATABASE
                     </h3>
                 </div>
 
-                <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
                     {databaseSkills.map((skill) => (
                         <SkillCard
                             key={skill.name}
@@ -147,15 +147,15 @@ export function SkillsGridSection() {
                 </div>
             </div>
 
-            <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
-                <div className="flex items-center gap-2">
+            <div className="border-t border-border-default pad-section lg:border-t-0 xl:pad-section-lg">
+                <div className="flex items-center gap-4">
                     <Wrench size={18} className="text-accent" />
-                    <h2 className="font-heading text-card-title tracking-wide xl:text-section">
+                    <h2 className="font-heading text-section tracking-wide">
                         TOOLS & OTHERS
                     </h2>
                 </div>
 
-                <div className="mt-5 grid grid-cols-2 gap-x-6">
+                <div className="mt-6 grid grid-cols-2 gap-x-8">
                     <ToolsList items={toolsLeft} />
                     <ToolsList items={toolsRight} />
                 </div>

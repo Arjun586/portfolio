@@ -1,11 +1,12 @@
 import { Mail, MapPin } from "lucide-react";
 import { contact, footerCta, footerQuote } from "../../data/home";
+import { Button } from "../ui/Button";
 
 function BuildingSketch() {
     return (
         <svg
             viewBox="0 0 120 160"
-            className="h-[96px] w-auto shrink-0 opacity-20 xl:h-[108px]"
+            className="h-24 w-auto shrink-0 opacity-20 xl:h-[6.75rem]"
             aria-hidden
         >
             <path
@@ -42,14 +43,14 @@ type FooterSectionProps = {
 export function FooterSection({ quote }: FooterSectionProps = {}) {
     const displayQuote = quote ?? footerQuote;
     return (
-        <section className="grid grid-cols-1 divide-y divide-border lg:grid-cols-[1fr_1.5fr_1fr] lg:divide-x lg:divide-y-0">
-            <div className="flex items-center gap-4 px-6 py-5 xl:px-8 xl:py-6">
+        <section className="grid grid-cols-1 divide-y divide-border-default lg:grid-cols-[1fr_1.5fr_1fr] lg:divide-x lg:divide-y-0">
+            <div className="flex items-center gap-4 pad-section xl:pad-section-lg">
                 <BuildingSketch />
                 <div>
-                    <p className="font-heading text-subheading leading-tight tracking-wide xl:text-card-title">
+                    <p className="font-heading text-card-title leading-tight tracking-wide">
                         {displayQuote.text}
                     </p>
-                    <p className="mt-1 text-small italic">
+                    <p className="mt-2 text-small italic">
                         — {displayQuote.author}
                     </p>
                 </div>
@@ -57,29 +58,26 @@ export function FooterSection({ quote }: FooterSectionProps = {}) {
 
             <div
                 id="experience"
-                className="flex flex-col justify-center px-6 py-5 xl:px-8 xl:py-6"
+                className="flex flex-col justify-center pad-section xl:pad-section-lg"
             >
-                <h2 className="font-heading text-card-title tracking-wide">
+                <h2 className="font-heading text-subheading tracking-wide xl:text-card-title">
                     {footerCta.title}
                 </h2>
-                <p className="mt-2 max-w-lg text-small leading-snug">
+                <p className="mt-4 max-w-lg text-body leading-relaxed">
                     {footerCta.description}
                 </p>
-                <button className="mt-4 inline-flex w-fit items-center gap-2 bg-accent px-6 py-2 font-heading text-small tracking-wide text-background transition-opacity hover:opacity-90 xl:text-body">
-                    GET IN TOUCH
-                    <span>→</span>
-                </button>
+                <Button className="mt-6">GET IN TOUCH</Button>
             </div>
 
             <div
                 id="contact"
-                className="flex flex-col justify-center gap-3 px-6 py-5 font-heading text-small tracking-wide xl:px-8 xl:py-6 xl:text-body"
+                className="flex flex-col justify-center gap-4 pad-section font-heading text-small tracking-wide xl:pad-section-lg xl:text-body"
             >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-4">
                     <Mail size={16} className="shrink-0" />
                     <span>{contact.email}</span>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-4">
                     <MapPin size={16} className="shrink-0" />
                     <span>{contact.location}</span>
                 </div>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { MobileHeader } from "../components/ui/MobileHeader";
 import { FooterSection } from "../components/home/FooterSection";
 import { SkillsGridSection } from "../components/skills/SkillsGridSection";
 import { SkillsHero } from "../components/skills/SkillsHero";
@@ -7,11 +7,7 @@ import { skillsFooterQuote } from "../data/skillsPage";
 export default function Skills() {
     return (
         <>
-            <div className="border-b border-border px-6 py-5 lg:hidden">
-                <Link to="/" className="font-heading text-section leading-none">
-                    ARJUN
-                </Link>
-            </div>
+            <MobileHeader />
 
             <SkillsHero />
             <SkillsGridSection />

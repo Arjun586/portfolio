@@ -4,38 +4,39 @@ import { ProjectPreview } from "./ProjectPreview";
 
 export function FeaturedProjects() {
     return (
-        <section id="projects" className="flex flex-col px-6 py-5 xl:px-8 xl:py-6">
-            <div className="flex items-end justify-between gap-4 border-b border-text pb-3">
+        <section id="projects" className="flex flex-col pad-section xl:pad-section-lg">
+            <div className="flex items-end justify-between gap-4 border-b border-border-strong pb-4">
                 <h2 className="font-heading text-section tracking-wide">
                     FEATURED PROJECTS
                 </h2>
-                <Link
-                    to="/projects"
-                    className="link-arrow shrink-0 pb-0.5 text-small xl:text-body"
-                >
+                <Link to="/projects" className="link-arrow shrink-0 pb-0.5">
                     VIEW ALL PROJECTS →
                 </Link>
             </div>
 
-            <div className="mt-4 grid flex-1 grid-cols-3 gap-4 xl:mt-5 xl:gap-5">
+            <div className="mt-6 grid flex-1 grid-cols-3 gap-4 xl:gap-6">
                 {featuredProjects.map((project) => (
                     <article key={project.title} className="flex min-w-0 flex-col">
                         <div className="relative h-[150px] xl:h-[175px]">
-                            <span className="absolute -top-px -left-px z-10 border border-text bg-secondary px-2 py-0.5 font-heading text-small leading-none xl:text-body">
+                            <span className="absolute -top-px -left-px z-10 border border-border-strong bg-secondary px-2 py-1 font-heading text-caption leading-none">
                                 {project.number}
                             </span>
                             <ProjectPreview variant={project.preview} />
                         </div>
 
-                        <h3 className="font-heading mt-2.5 text-subheading leading-none tracking-wide xl:mt-3 xl:text-card-title">
+                        <h3 className="font-heading mt-4 text-subheading leading-none tracking-wide xl:text-card-title">
                             {project.title}
                         </h3>
 
-                        <p className="mt-1.5 text-caption leading-snug xl:text-small">
+                        <span className="mt-2 font-heading text-caption tracking-wide text-accent">
+                            {project.category}
+                        </span>
+
+                        <p className="mt-2 text-body leading-relaxed">
                             {project.description}
                         </p>
 
-                        <span className="mt-auto pt-2 font-body text-small text-accent italic xl:text-body">
+                        <span className="mt-auto pt-4 font-body text-caption text-accent italic">
                             {project.category}
                         </span>
                     </article>

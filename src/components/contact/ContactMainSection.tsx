@@ -5,6 +5,7 @@ import {
     contactDetails,
     socialLinks,
 } from "../../data/contactPage";
+import { Button } from "../ui/Button";
 
 function DetailIcon({ type }: { type: (typeof contactDetails)[number]["icon"] }) {
     const className = "text-text";
@@ -28,85 +29,83 @@ function SocialIcon({ type }: { type: (typeof socialLinks)[number]["icon"] }) {
 
 export function ContactMainSection() {
     return (
-        <section className="grid grid-cols-1 border-b border-border lg:grid-cols-3 lg:divide-x lg:divide-border">
-            <div className="px-6 py-6 xl:px-8 xl:py-8">
+        <section className="grid grid-cols-1 border-b border-border-default lg:grid-cols-3 lg:divide-x lg:divide-border-default">
+            <div className="pad-section xl:pad-section-lg">
                 <h2 className="font-heading text-section tracking-wide">
                     SEND ME A MESSAGE
                 </h2>
 
                 <form
-                    className="mt-5 space-y-4"
+                    className="mt-6 space-y-6"
                     onSubmit={(e) => e.preventDefault()}
                 >
-                    <div>
-                        <label className="font-heading text-small tracking-wide xl:text-body">
+                    <div className="form-field">
+                        <label className="form-label" htmlFor="contact-name">
                             YOUR NAME
                         </label>
                         <input
+                            id="contact-name"
                             type="text"
-                            className="mt-1.5 w-full border border-text/30 bg-background/60 px-3 py-2 font-body text-small outline-none focus:border-accent"
+                            className="form-input"
                         />
                     </div>
 
-                    <div>
-                        <label className="font-heading text-caption tracking-wide xl:text-small">
+                    <div className="form-field">
+                        <label className="form-label" htmlFor="contact-email">
                             YOUR EMAIL
                         </label>
                         <input
+                            id="contact-email"
                             type="email"
-                            className="mt-1.5 w-full border border-text/30 bg-background/60 px-3 py-2 font-body text-small outline-none focus:border-accent"
+                            className="form-input"
                         />
                     </div>
 
-                    <div>
-                        <label className="font-heading text-caption tracking-wide xl:text-small">
+                    <div className="form-field">
+                        <label className="form-label" htmlFor="contact-subject">
                             SUBJECT
                         </label>
                         <input
+                            id="contact-subject"
                             type="text"
-                            className="mt-1.5 w-full border border-text/30 bg-background/60 px-3 py-2 font-body text-small outline-none focus:border-accent"
+                            className="form-input"
                         />
                     </div>
 
-                    <div>
-                        <label className="font-heading text-caption tracking-wide xl:text-small">
+                    <div className="form-field">
+                        <label className="form-label" htmlFor="contact-message">
                             YOUR MESSAGE
                         </label>
                         <textarea
+                            id="contact-message"
                             rows={4}
-                            className="mt-1.5 w-full resize-none border border-text/30 bg-background/60 px-3 py-2 font-body text-small outline-none focus:border-accent"
+                            className="form-input resize-none"
                         />
                     </div>
 
-                    <button
-                        type="submit"
-                        className="inline-flex items-center gap-2 bg-accent px-6 py-2.5 font-heading text-small tracking-wide text-background transition-opacity hover:opacity-90 xl:text-body"
-                    >
-                        SEND MESSAGE
-                        <span>→</span>
-                    </button>
+                    <Button type="submit">SEND MESSAGE</Button>
                 </form>
             </div>
 
-            <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
+            <div className="border-t border-border-default pad-section lg:border-t-0 xl:pad-section-lg">
                 <h2 className="font-heading text-section tracking-wide">
                     CONTACT DETAILS
                 </h2>
 
-                <ul className="mt-5">
+                <ul className="mt-6">
                     {contactDetails.map((item) => (
                         <li
                             key={item.label}
-                            className="flex gap-3 border-b border-dashed border-text/30 py-4 first:pt-0 last:border-b-0"
+                            className="flex gap-4 border-b border-dashed border-border-subtle py-6 first:pt-0 last:border-b-0"
                         >
-                            <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-text/50 bg-background/40">
+                            <div className="icon-box">
                                 <DetailIcon type={item.icon} />
                             </div>
                             <div>
                                 <p className="font-heading text-caption tracking-wide text-accent">
                                     {item.label}
                                 </p>
-                                <p className="mt-0.5 text-body leading-snug">
+                                <p className="mt-2 text-body leading-relaxed">
                                     {item.value}
                                 </p>
                             </div>
@@ -115,12 +114,12 @@ export function ContactMainSection() {
                 </ul>
             </div>
 
-            <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
+            <div className="border-t border-border-default pad-section lg:border-t-0 xl:pad-section-lg">
                 <h2 className="font-heading text-section tracking-wide">
                     LET&apos;S CONNECT
                 </h2>
 
-                <div className="mt-5 grid grid-cols-3 gap-2">
+                <div className="mt-6 grid grid-cols-3 gap-4">
                     {socialLinks.map((link) => (
                         <a
                             key={link.label}
@@ -131,7 +130,7 @@ export function ContactMainSection() {
                                     ? undefined
                                     : "noopener noreferrer"
                             }
-                            className="flex flex-col items-center gap-2 border border-text/50 bg-background/40 px-2 py-3 transition-opacity hover:opacity-70"
+                            className="flex flex-col items-center gap-4 border border-border-subtle bg-background/40 px-2 py-4 transition-opacity hover:opacity-70"
                         >
                             <SocialIcon type={link.icon} />
                             <span className="font-heading text-caption tracking-wide">
@@ -141,18 +140,18 @@ export function ContactMainSection() {
                     ))}
                 </div>
 
-                <h3 className="font-heading mt-8 text-small tracking-wide text-accent xl:text-body">
+                <h3 className="font-heading mt-8 text-subheading tracking-wide text-accent">
                     I&apos;M AVAILABLE FOR
                 </h3>
 
-                <ul className="mt-4 space-y-3">
+                <ul className="mt-6 space-y-4">
                     {availableFor.map((item) => (
-                        <li key={item} className="flex items-start gap-2.5">
+                        <li key={item} className="flex items-start gap-4">
                             <Check
                                 size={16}
-                                className="mt-0.5 shrink-0 text-accent"
+                                className="mt-1 shrink-0 text-accent"
                             />
-                            <span className="text-body leading-snug">
+                            <span className="text-body leading-relaxed">
                                 {item}
                             </span>
                         </li>

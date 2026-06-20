@@ -3,16 +3,16 @@ import { aboutText } from "../../data/home";
 
 export function AboutSection() {
     return (
-        <section id="about" className="flex flex-col px-6 py-5 xl:px-8 xl:py-6">
+        <section id="about" className="flex flex-col pad-section xl:pad-section-lg">
             <h2 className="font-heading text-section tracking-wide">
                 ABOUT ME
             </h2>
 
-            <p className="mt-5 text-body leading-relaxed">
+            <p className="mt-6 text-body leading-relaxed">
                 {aboutText}
             </p>
 
-            <Link to="/about" className="link-arrow mt-5 text-body">
+            <Link to="/about" className="link-arrow mt-6">
                 MORE ABOUT ME →
             </Link>
         </section>

@@ -7,18 +7,23 @@
     --color-text: #121212;
     --color-border: #a08868;
 
+    /* Semantic borders */
+    --color-border-strong: #121212;
+    --color-border-default: #a08868;
+    --color-border-subtle: rgb(18 18 18 / 0.25);
+
     --font-heading: "Bebas Neue", sans-serif;
     --font-body: "Merriweather", serif;
 
     /* Typography scale */
-    --text-display-xl: 7.5rem; /* 120px */
-    --text-display: 5rem; /* 80px */
-    --text-section: 3rem; /* 48px */
-    --text-card-title: 1.5rem; /* 24px */
-    --text-subheading: 1.125rem; /* 18px */
-    --text-body: 1rem; /* 16px */
-    --text-small: 0.875rem; /* 14px */
-    --text-caption: 0.75rem; /* 12px */
+    --text-display-xl: 7.5rem; /* 120px — hero names */
+    --text-display: 5rem; /* 80px — main hero headings */
+    --text-section: 3rem; /* 48px — section titles */
+    --text-card-title: 1.5rem; /* 24px — quotes, card titles */
+    --text-subheading: 1.125rem; /* 18px — card headings, hero subtitles */
+    --text-body: 1rem; /* 16px — paragraphs */
+    --text-small: 0.875rem; /* 14px — secondary content */
+    --text-caption: 0.75rem; /* 12px — labels, metadata */
 }
 
 @utility font-heading {
@@ -29,7 +34,129 @@
     font-family: var(--font-body);
 }
 
+/* ── Layout spacing (8 / 16 / 24 / 32 / 48 / 64) ── */
 
+@utility pad-section {
+    padding: 1.5rem;
+}
+
+@utility pad-section-lg {
+    padding: 2rem;
+}
+
+@utility pad-hero {
+    padding: 2rem 1.5rem;
+}
+
+@utility pad-hero-lg {
+    padding: 2.5rem 2.5rem;
+}
+
+@utility pad-mobile-header {
+    padding: 1.25rem 1.5rem;
+}
+
+/* ── Dividers ── */
+
+@utility divider-strong {
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-border-strong);
+}
+
+@utility divider-default {
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-border-default);
+}
+
+/* ── Primary button ── */
+
+.btn-primary {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-accent);
+    font-family: var(--font-heading);
+    font-size: var(--text-body);
+    letter-spacing: 0.04em;
+    color: var(--color-background);
+    transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+/* ── Form (editorial) ── */
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-family: var(--font-heading);
+    font-size: var(--text-caption);
+    letter-spacing: 0.08em;
+}
+
+.form-input {
+    width: 100%;
+    border: 1px solid var(--color-border-subtle);
+    background-color: rgb(221 208 181 / 0.6);
+    padding: 0.75rem 1rem;
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    line-height: 1.5;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+    border-color: var(--color-accent);
+}
+
+/* ── Skill / icon card ── */
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 4.5rem;
+    border: 1px solid var(--color-border-subtle);
+    background-color: rgb(221 208 181 / 0.4);
+    padding: 1rem 0.5rem;
+}
+
+.skill-card-icon {
+    display: flex;
+    height: 3.5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border-subtle);
+    background-color: rgb(221 208 181 / 0.4);
+}
+
+/* ── Icon box (contact, etc.) ── */
+
+.icon-box {
+    display: flex;
+    height: 2.5rem;
+    width: 2.5rem;
+    shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border-subtle);
+    background-color: rgb(221 208 181 / 0.4);
+}
 
 html {
     scroll-behavior: smooth;
@@ -77,6 +204,7 @@ img {
 
 .link-arrow {
     font-family: var(--font-heading);
+    font-size: var(--text-small);
     color: var(--color-accent);
     letter-spacing: 0.06em;
     transition: opacity 0.2s ease;

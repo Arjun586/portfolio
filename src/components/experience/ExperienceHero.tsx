@@ -1,20 +1,20 @@
-import { MapPin } from "lucide-react";
-import portraitImg from "../../assets/myImage.png";
 import { experienceHero } from "../../data/experience";
+import { HeroQuoteColumn } from "../ui/HeroQuoteColumn";
+import { PortraitImage } from "../ui/PortraitImage";
 
 export function ExperienceHero() {
     return (
-        <section className="relative grid grid-cols-1 border-b border-border lg:grid-cols-[1.15fr_auto_1fr]">
-            <div className="flex flex-col justify-center px-6 py-8 xl:px-10 xl:py-10">
+        <section className="relative grid grid-cols-1 border-b border-border-default lg:grid-cols-[1.15fr_auto_1fr]">
+            <div className="flex flex-col justify-center pad-hero xl:pad-hero-lg">
                 <span className="font-body text-body text-accent italic xl:text-subheading">
                     {experienceHero.label}
                 </span>
 
-                <h1 className="font-heading text-display leading-[0.9] tracking-tight xl:text-display-xl">
+                <h1 className="font-heading text-display leading-[0.9] tracking-tight">
                     {experienceHero.title}
                 </h1>
 
-                <p className="mt-3 font-heading text-small tracking-wide text-accent xl:text-body">
+                <p className="mt-4 font-heading text-subheading tracking-wide text-accent">
                     {experienceHero.roleLine}
                 </p>
 
@@ -23,43 +23,9 @@ export function ExperienceHero() {
                 </p>
             </div>
 
-            <div className="flex items-start justify-center px-4 py-6 xl:px-6 xl:py-8">
-                <div className="relative pr-4 pb-4 pt-1 xl:pr-5 xl:pb-5">
-                    <div
-                        className="absolute left-3 top-4 h-[200px] w-[200px] bg-secondary xl:left-4 xl:top-5 xl:h-[220px] xl:w-[220px]"
-                        aria-hidden
-                    />
-                    <div className="relative z-10 h-[200px] w-[200px] border border-text xl:h-[220px] xl:w-[220px]">
-                        <img
-                            src={portraitImg}
-                            alt="Arjun Dev"
-                            className="h-full w-full object-cover object-top grayscale"
-                        />
-                    </div>
-                </div>
-            </div>
+            <PortraitImage />
 
-            <div className="flex flex-col justify-center px-6 py-8 xl:px-10 xl:py-10">
-                <div className="font-heading text-display leading-none text-accent xl:text-display-xl">
-                    &ldquo;
-                </div>
-
-                <p className="font-heading mt-2 max-w-sm text-card-title leading-snug tracking-wide xl:text-section">
-                    {experienceHero.quote}
-                </p>
-
-                <p className="mt-6 font-body text-card-title text-accent italic xl:mt-8 xl:text-section">
-                    Arjun Dev
-                </p>
-
-                <div className="mt-10 xl:mt-12">
-                    <div className="mb-3 h-px w-full bg-text" />
-                    <div className="flex items-center justify-between font-heading text-body tracking-widest xl:text-subheading">
-                        <span>BASED IN INDIA</span>
-                        <MapPin size={18} />
-                    </div>
-                </div>
-            </div>
+            <HeroQuoteColumn quote={experienceHero.quote} />
         </section>
     );
 }

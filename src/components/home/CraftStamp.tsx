@@ -7,7 +7,7 @@ export function CraftStamp({ style }: { style?: CSSProperties }) {
             style={{ left: "26%", top: "62%", ...style }}
             aria-hidden
         >
-            <div className="relative flex h-[110px] w-[110px] items-center justify-center rounded-full border border-text/70 bg-background/95 xl:h-[124px] xl:w-[124px]">
+            <div className="relative flex h-[110px] w-[110px] items-center justify-center rounded-full border border-border-subtle bg-background/95 xl:h-[124px] xl:w-[124px]">
                 <svg
                     viewBox="0 0 124 124"
                     className="absolute inset-0 h-full w-full"

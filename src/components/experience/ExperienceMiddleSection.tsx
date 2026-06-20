@@ -45,25 +45,25 @@ function TechIcon({ type }: { type: TechIconKey }) {
 
 export function ExperienceMiddleSection() {
     return (
-        <section className="grid grid-cols-1 border-b border-border lg:grid-cols-3 lg:divide-x lg:divide-border">
-            <div className="px-6 py-6 xl:px-8 xl:py-8">
+        <section className="grid grid-cols-1 border-b border-border-default lg:grid-cols-3 lg:divide-x lg:divide-border-default">
+            <div className="pad-section xl:pad-section-lg">
                 <h2 className="font-heading text-section tracking-wide">
                     PROFESSIONAL JOURNEY
                 </h2>
 
-                <div className="relative mt-6 space-y-6 pl-5">
-                    <div className="absolute top-1 bottom-1 left-[5px] w-px bg-text" />
+                <div className="relative mt-6 space-y-6 pl-6">
+                    <div className="absolute top-1 bottom-1 left-0 w-px bg-border-strong" />
 
                     {professionalJourney.map((item) => (
                         <div key={item.period} className="relative">
-                            <div className="absolute top-1.5 -left-5 h-2.5 w-2.5 rounded-full bg-text" />
+                            <div className="absolute top-2 -left-6 h-2 w-2 bg-border-strong" />
                             <p className="font-heading text-caption tracking-wide text-accent">
                                 {item.period}
                             </p>
-                            <h3 className="font-heading mt-1 text-body tracking-wide xl:text-subheading">
+                            <h3 className="font-heading mt-2 text-subheading tracking-wide">
                                 {item.role}
                             </h3>
-                            <p className="mt-1 text-body leading-relaxed">
+                            <p className="mt-2 text-body leading-relaxed">
                                 {item.skills}
                             </p>
                         </div>
@@ -71,7 +71,7 @@ export function ExperienceMiddleSection() {
                 </div>
             </div>
 
-            <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
+            <div className="border-t border-border-default pad-section lg:border-t-0 xl:pad-section-lg">
                 <h2 className="font-heading text-section tracking-wide">
                     TECH STACK IN PRACTICE
                 </h2>
@@ -79,11 +79,11 @@ export function ExperienceMiddleSection() {
                 <div className="mt-6 space-y-6">
                     {techStackGroups.map((group) => (
                         <div key={group.title}>
-                            <h3 className="font-heading text-small tracking-wide text-accent xl:text-body">
+                            <h3 className="font-heading text-subheading tracking-wide text-accent">
                                 {group.title}
                             </h3>
                             <div
-                                className={`mt-3 grid gap-2 xl:gap-2.5 ${
+                                className={`mt-4 grid gap-4 ${
                                     group.items.length === 5
                                         ? "grid-cols-3 xl:grid-cols-5"
                                         : group.items.length === 4
@@ -94,11 +94,9 @@ export function ExperienceMiddleSection() {
                                 {group.items.map((item) => (
                                     <div
                                         key={item.name}
-                                        className="flex flex-col items-center gap-1.5"
+                                        className="skill-card"
                                     >
-                                        <div className="flex h-11 w-full items-center justify-center rounded-sm border border-text/70 bg-background/40 xl:h-12">
-                                            <TechIcon type={item.icon} />
-                                        </div>
+                                        <TechIcon type={item.icon} />
                                         <span className="font-body text-center text-caption font-bold leading-tight">
                                             {item.name}
                                         </span>
@@ -110,14 +108,14 @@ export function ExperienceMiddleSection() {
                 </div>
             </div>
 
-            <div className="border-t border-border px-6 py-6 lg:border-t-0 xl:px-8 xl:py-8">
+            <div className="border-t border-border-default pad-section lg:border-t-0 xl:pad-section-lg">
                 <h2 className="font-heading text-section tracking-wide">
                     HIGHLIGHTS
                 </h2>
 
                 <div className="mt-6 space-y-4">
                     {highlights.map((item) => (
-                        <div key={item.number} className="flex gap-3">
+                        <div key={item.number} className="flex gap-4">
                             <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-accent bg-secondary/50 font-heading text-small text-accent">
                                 {item.number}
                             </span>

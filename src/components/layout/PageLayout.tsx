@@ -7,7 +7,7 @@ export function PageLayout() {
             <div className="mx-auto grid min-h-screen max-w-[1600px] grid-cols-1 lg:grid-cols-[180px_1fr]">
                 <Sidebar />
 
-                <main className="border-border lg:border-l">
+                <main className="border-border-default lg:border-l">
                     <Outlet />
                 </main>
             </div>

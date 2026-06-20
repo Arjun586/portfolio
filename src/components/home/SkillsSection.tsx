@@ -21,20 +21,18 @@ const techIcons: Record<(typeof featuredTechStack)[number], IconType> = {
 
 export function SkillsSection() {
     return (
-        <section id="skills" className="flex flex-col px-6 py-5 xl:px-8 xl:py-6">
+        <section id="skills" className="flex flex-col pad-section xl:pad-section-lg">
             <h2 className="font-heading text-section tracking-wide">
                 SKILLS
             </h2>
 
-            <div className="mt-5 grid grid-cols-3 gap-3 xl:gap-4">
+            <div className="mt-6 grid grid-cols-3 gap-4">
                 {featuredTechStack.map((name) => {
                     const Icon = techIcons[name];
 
                     return (
-                        <div key={name} className="flex flex-col items-center gap-2">
-                            <div className="flex h-14 w-full items-center justify-center rounded-md border border-text/70 bg-background/40 xl:h-16">
-                                <Icon size={26} className="text-text" />
-                            </div>
+                        <div key={name} className="skill-card">
+                            <Icon size={26} className="text-text" />
                             <span className="font-body text-center text-caption font-bold leading-tight">
                                 {name}
                             </span>
@@ -43,7 +41,7 @@ export function SkillsSection() {
                 })}
             </div>
 
-            <Link to="/skills" className="link-arrow mt-5 text-small xl:text-body">
+            <Link to="/skills" className="link-arrow mt-6">
                 SEE ALL SKILLS →
             </Link>
         </section>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { MobileHeader } from "../components/ui/MobileHeader";
 import { ExperienceHero } from "../components/experience/ExperienceHero";
 import { ExperienceMiddleSection } from "../components/experience/ExperienceMiddleSection";
 import { ExperienceSnapshot } from "../components/experience/ExperienceSnapshot";
@@ -8,11 +8,7 @@ import { experienceFooterQuote } from "../data/experience";
 export default function Experience() {
     return (
         <>
-            <div className="border-b border-border px-6 py-5 lg:hidden">
-                <Link to="/" className="font-heading text-section leading-none">
-                    ARJUN
-                </Link>
-            </div>
+            <MobileHeader />
 
             <ExperienceHero />
             <ExperienceMiddleSection />
