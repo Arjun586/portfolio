@@ -8,7 +8,7 @@ type HeroQuoteColumnProps = {
 
 export function HeroQuoteColumn({
     quote,
-    author = "Arjun Dev",
+    author = "Arjun",
     showLocation = true,
 }: HeroQuoteColumnProps) {
     return (

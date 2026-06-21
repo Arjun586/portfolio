@@ -6,7 +6,7 @@ type PortraitImageProps = {
 };
 
 export function PortraitImage({
-    alt = "Arjun Dev",
+    alt = "Arjun",
     className = "",
 }: PortraitImageProps) {
     return (

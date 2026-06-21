@@ -113,7 +113,7 @@ export function ProjectPreview({ variant, className = "" }: ProjectPreviewProps)
                 </div>
                 <div className="absolute top-[30%] left-[10%]">
                     <p className="font-heading text-caption tracking-wide text-white/90">
-                        ARJUN DEV
+                        Arjun
                     </p>
                     <div className="mt-2 h-px w-12 bg-accent/60" />
                 </div>

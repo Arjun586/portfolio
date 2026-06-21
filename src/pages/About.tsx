@@ -1,16 +1,17 @@
 import { MobileHeader } from "../components/ui/MobileHeader";
+import { AboutHero } from "../components/about/AboutHero";
 import { AboutMiddleSection } from "../components/about/AboutMiddleSection";
 import { FooterSection } from "../components/home/FooterSection";
-import { HeroSection } from "../components/home/HeroSection";
+import { aboutFooterQuote } from "../data/about";
+
 
 export default function About() {
     return (
         <>
             <MobileHeader />
-
-            <HeroSection />
+            <AboutHero />
             <AboutMiddleSection />
-            <FooterSection />
+            <FooterSection quote={aboutFooterQuote} />
         </>
     );
 }

@@ -9,15 +9,12 @@ export default function Home() {
     return (
         <>
             <MobileHeader />
-
             <HeroSection />
-
             <section className="grid grid-cols-1 border-b border-border-default lg:grid-cols-[1fr_2fr_1fr] lg:divide-x lg:divide-border-default">
                 <AboutSection />
                 <FeaturedProjects />
                 <SkillsSection />
             </section>
-
             <FooterSection />
         </>
     );

@@ -1,3 +1,16 @@
+export const aboutHero = {
+    label: "ABOUT ME",
+    title: "Arjun",
+    subtitle: "FULL STACK DEVELOPER",
+    bio: "I'm a Full Stack Developer with a strong passion for building modern, responsive, and user-friendly web applications. I enjoy turning complex problems into simple, beautiful and intuitive designs.",
+    quote: "CODE IS LIKE HUMOR. WHEN YOU HAVE TO EXPLAIN IT, IT'S BAD.",
+} as const;
+
+export const aboutFooterQuote = {
+    text: "CONTINUOUS LEARNING FUELS GROWTH.",
+    author: "Arjun",
+} as const;
+
 export const journey = [
     {
         period: "2024 – PRESENT",

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { aboutText } from "../../data/home";
+import portraitImg from "../../assets/myImage.png";
 
 export function AboutSection() {
     return (
@@ -8,9 +9,19 @@ export function AboutSection() {
                 ABOUT ME
             </h2>
 
-            <p className="mt-6 text-body leading-relaxed">
-                {aboutText}
-            </p>
+            <div className="mt-6 flex flex-col gap-4">
+                <div className="relative w-full aspect-[4/3] overflow-hidden border border-border-subtle">
+                    <img
+                        src={portraitImg}
+                        alt="Arjun at work"
+                        className="h-full w-full object-cover object-top grayscale"
+                    />
+                </div>
+
+                <p className="text-body leading-relaxed">
+                    {aboutText}
+                </p>
+            </div>
 
             <Link to="/about" className="link-arrow mt-6">
                 MORE ABOUT ME →

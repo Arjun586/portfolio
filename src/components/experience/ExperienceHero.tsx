@@ -10,13 +10,18 @@ export function ExperienceHero() {
                     {experienceHero.label}
                 </span>
 
-                <h1 className="font-heading text-display leading-[0.9] tracking-tight">
+                <h1 className="font-heading text-display-xl leading-[0.9] tracking-tight">
                     {experienceHero.title}
                 </h1>
 
-                <p className="mt-4 font-heading text-subheading tracking-wide text-accent">
+                <p className="mt-4 font-heading text-subheading tracking-wide">
                     {experienceHero.roleLine}
                 </p>
+                <p className="font-heading text-subheading tracking-wide text-accent">
+                    {experienceHero.roleLineAccent}
+                </p>
+
+                <div className="divider-strong mt-4 max-w-xs" />
 
                 <p className="mt-4 max-w-md text-body leading-relaxed">
                     {experienceHero.bio}
