@@ -1,65 +1,83 @@
 export const experienceHero = {
-    label: "MY JOURNEY",
+    label: "MY GROWTH",
     title: "EXPERIENCE",
-    roleLine: "Arjun",
-    roleLineAccent: "FULL STACK DEVELOPER  •  2023 – PRESENT",
-    bio: "Building modern web applications, learning scalable systems, and continuously improving as an engineer.",
+    roleLine: "ARJUN",
+    roleLineAccent: "CSE STUDENT • FULL-STACK DEVELOPMENT & BACKEND SYSTEMS",
+    bio: "Building projects, exploring backend engineering, and learning how reliable software systems are designed, deployed, and maintained.",
     quote: "EXPERIENCE IS THE NAME EVERYONE GIVES TO THEIR MISTAKES.",
 } as const;
 
-export const professionalJourney = [
+export const growthTimeline = [
     {
-        period: "2025 – Present",
-        role: "Full Stack Developer",
-        bullets: ["MERN Applications", "REST APIs", "Database Design", "Authentication Systems"],
+        period: "2026 – PRESENT",
+        title: "ENGINEERING & INFRASTRUCTURE",
+        bullets: ["Docker", "CI/CD Pipelines", "Deployment Workflows", "System Design"],
+        description:
+            "Exploring modern infrastructure, automation, deployment, and software engineering practices.",
+    },
+    {
+        period: "2025 – 2026",
+        title: "BACKEND & SYSTEMS",
+        bullets: ["Node.js & Express", "PostgreSQL & Prisma", "Authentication & Authorization", "REST APIs"],
+        description:
+            "Focused on backend engineering, APIs, databases, and scalable application architecture.",
     },
     {
         period: "2024 – 2025",
-        role: "Open Source Contributor",
-        bullets: ["Git & GitHub", "Bug Fixes", "Documentation", "Community Projects"],
+        title: "FULL-STACK DEVELOPMENT",
+        bullets: ["React & TypeScript", "MERN Applications", "State Management", "Responsive Interfaces"],
+        description:
+            "Expanded into full-stack development while building larger and more complex web applications.",
     },
     {
         period: "2023 – 2024",
-        role: "Web Development Student",
-        bullets: ["HTML", "CSS", "JavaScript", "React Fundamentals"],
+        title: "FOUNDATIONS",
+        bullets: ["HTML & CSS", "JavaScript", "Git & GitHub", "Programming Fundamentals"],
+        description:
+            "Built my first websites and established a strong foundation in web development and programming.",
     },
 ] as const;
 
-export const techStackGroups = [
+export const currentlyExploring = [
     {
-        title: "FRONTEND",
-        items: [
-            { name: "React.js", icon: "react" as const },
-            { name: "Next.js", icon: "nextjs" as const },
-            { name: "Tailwind CSS", icon: "tailwind" as const },
-            { name: "JavaScript", icon: "javascript" as const },
-            { name: "TypeScript", icon: "typescript" as const },
-        ],
+        title: "BACKEND ENGINEERING",
+        description: "Designing APIs and scalable services.",
     },
     {
-        title: "BACKEND",
-        items: [
-            { name: "Node.js", icon: "nodejs" as const },
-            { name: "Express.js", icon: "express" as const },
-            { name: "REST APIs", icon: "api" as const },
-            { name: "JWT Auth", icon: "jwt" as const },
-        ],
+        title: "DOCKER",
+        description: "Containerization and development workflows.",
     },
     {
-        title: "DATABASE",
-        items: [
-            { name: "MongoDB", icon: "mongodb" as const },
-            { name: "PostgreSQL", icon: "postgresql" as const },
-            { name: "Prisma", icon: "prisma" as const },
-        ],
+        title: "CI/CD",
+        description: "Deployment automation and software delivery.",
+    },
+    {
+        title: "SYSTEM DESIGN",
+        description: "Learning how scalable systems are structured.",
+    },
+    {
+        title: "AI APPLICATIONS",
+        description: "Exploring practical AI integration.",
+    },
+    {
+        title: "DEVELOPER TOOLING",
+        description: "Improving workflows, tooling, and productivity.",
     },
 ] as const;
 
 export const highlights = [
-    { number: "01", text: "Built multiple full-stack applications using MERN stack architecture." },
-    { number: "02", text: "Designed responsive interfaces for desktop and mobile devices." },
-    { number: "03", text: "Implemented authentication, authorization and secure APIs." },
-    { number: "04", text: "Worked with modern deployment and development workflows." },
+    {
+        number: "01",
+        text: "Built multiple full-stack applications using modern web technologies.",
+    },
+    {
+        number: "02",
+        text: "Participated in hackathons and collaborative development projects.",
+    },
+    {
+        number: "03",
+        text: "Exploring Docker, CI/CD, and modern deployment workflows.",
+    },
 ] as const;
 
 export const experienceSnapshot = [
@@ -68,8 +86,3 @@ export const experienceSnapshot = [
     { value: "50+", label: "GITHUB REPOSITORIES", icon: "github" as const },
     { value: "3+", label: "YEARS LEARNING", icon: "graduation" as const },
 ] as const;
-
-export const experienceFooterQuote = {
-    text: "EVERY PROJECT TEACHES SOMETHING NEW.",
-    author: "— Arjun",
-} as const;

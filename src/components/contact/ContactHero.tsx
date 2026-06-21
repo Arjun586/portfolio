@@ -1,4 +1,4 @@
-import { contactHero } from "../../data/contactPage";
+import { contactHero, contactHeroQuote } from "../../data/contactPage";
 import { HeroQuoteColumn } from "../ui/HeroQuoteColumn";
 import { PortraitImage } from "../ui/PortraitImage";
 
@@ -24,7 +24,7 @@ export function ContactHero() {
             </div>
 
             <PortraitImage />
-            <HeroQuoteColumn quote={contactHero.quote} />
+            <HeroQuoteColumn quote={contactHeroQuote.text} author={contactHeroQuote.author} />
         </section>
     );
 }

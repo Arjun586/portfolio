@@ -20,7 +20,7 @@ export function HeroSection() {
                 </h1>
 
                 <h2 className="font-heading mt-4 text-subheading tracking-widest uppercase">
-                    FULL STACK DEVELOPER
+                    SOFTWARE ENGINEER
                 </h2>
 
                 <div className="divider-strong mt-4" />
@@ -36,7 +36,7 @@ export function HeroSection() {
 
             <PortraitImage alt="Arjun" />
 
-            <HeroQuoteColumn quote={heroQuote} author="Arjun" />
+            <HeroQuoteColumn quote={heroQuote.text} author={heroQuote.author} />
         </section>
     );
 }

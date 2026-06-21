@@ -23,9 +23,10 @@ export const projectFilters: { id: ProjectFilterId; label: string }[] = [
 export const projectsHero = {
     label: "MY WORK",
     title: "PROJECTS",
-    subtitle: "A collection of projects that showcase my skills, creativity, and passion for building digital experiences.",
-    quote: "THE BEST WAY TO PREDICT THE FUTURE IS TO BUILD IT.",
-};
+    subtitle:
+        "A selection of projects that reflect my interest in software engineering, backend systems, problem solving, and building products that continue to push my skills forward.",
+    metadata: "FULL-STACK DEVELOPMENT • BACKEND SYSTEMS • AI APPLICATIONS",
+} as const;
 
 export const allProjects: Project[] = [
     {

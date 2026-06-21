@@ -1,4 +1,4 @@
-import { Code2, Lightbulb, PenLine } from "lucide-react";
+import { BookOpen, GraduationCap, Layers, Lightbulb, ScanEye } from "lucide-react";
 import {
     approachIntro,
     approachSteps,
@@ -10,10 +10,13 @@ function DriveIcon({ type }: { type: (typeof drives)[number]["icon"] }) {
     const iconClass = "text-text";
     const size = 20;
 
-    if (type === "code") return <Code2 size={size} className={iconClass} />;
+    if (type === "layers") return <Layers size={size} className={iconClass} />;
+    if (type === "graduation")
+        return <GraduationCap size={size} className={iconClass} />;
     if (type === "lightbulb")
         return <Lightbulb size={size} className={iconClass} />;
-    return <PenLine size={size} className={iconClass} />;
+    if (type === "scan") return <ScanEye size={size} className={iconClass} />;
+    return <BookOpen size={size} className={iconClass} />;
 }
 
 export function AboutMiddleSection() {

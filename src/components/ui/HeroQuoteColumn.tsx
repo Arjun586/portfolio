@@ -21,7 +21,7 @@ export function HeroQuoteColumn({
                 {quote}
             </p>
 
-            <p className="mt-6 font-body text-card-title text-accent italic xl:mt-8">
+            <p className="mt-6 font-signature text-card-title text-accent italic xl:mt-8">
                 {author}
             </p>
 

@@ -1,80 +1,101 @@
 export const aboutHero = {
     label: "ABOUT ME",
     title: "Arjun",
-    subtitle: "FULL STACK DEVELOPER",
-    bio: "I'm a Full Stack Developer with a strong passion for building modern, responsive, and user-friendly web applications. I enjoy turning complex problems into simple, beautiful and intuitive designs.",
-    quote: "CODE IS LIKE HUMOR. WHEN YOU HAVE TO EXPLAIN IT, IT'S BAD.",
+    subtitle: "SOFTWARE ENGINEER",
+    bio: "I approach software development with a focus on clarity, usability, and attention to detail. Whether building backend systems or refining user experiences, I value purposeful design and thoughtful execution.",
 } as const;
 
-export const aboutFooterQuote = {
-    text: "CONTINUOUS LEARNING FUELS GROWTH.",
-    author: "Arjun",
+export const aboutHeroQuote = {
+    text: "The soul becomes dyed with the color of its thoughts.",
+    author: "Marcus Aurelius",
 } as const;
 
 export const journey = [
     {
-        period: "2024 – PRESENT",
-        role: "Full Stack Developer",
+        period: "2023 – 2024",
+        role: "FOUNDATIONS",
         description:
-            "Building scalable web applications and exploring new technologies.",
+            "Started my B.Tech in Computer Science (AI & ML) and built my first websites using HTML, CSS, and JavaScript. Developed a strong foundation in programming, web development, and problem solving.",
     },
     {
-        period: "2022 – 2024",
-        role: "Frontend Developer",
+        period: "2024 – 2025",
+        role: "FULL-STACK DEVELOPMENT",
         description:
-            "Focused on creating responsive and interactive user interfaces.",
+            "Expanded into React, Node.js, Express, MongoDB, and modern web development practices. Built full-stack applications and gained hands-on experience designing and developing complete web solutions.",
     },
     {
-        period: "2021 – 2022",
-        role: "Web Developer",
+        period: "2025 – 2026",
+        role: "BACKEND & SYSTEMS",
         description:
-            "Started my journey building websites and learning the fundamentals.",
+            "Focused on backend engineering, authentication, APIs, databases, and scalable application architecture. Worked on larger projects, hackathons, and explored system design concepts.",
+    },
+    {
+        period: "2026 – PRESENT",
+        role: "ENGINEERING & INFRASTRUCTURE",
+        description:
+            "Currently learning Docker, CI/CD, deployment workflows, and modern development infrastructure while continuing to build production-oriented software and AI-powered applications.",
     },
 ] as const;
 
 export const drives = [
     {
-        title: "CLEAN CODE",
+        title: "BUILDING SYSTEMS",
         description:
-            "I believe in writing clean, maintainable, and scalable code.",
-        icon: "code" as const,
+            "I enjoy understanding how software works beneath the surface from APIs and databases to deployment workflows and infrastructure.",
+        icon: "layers" as const,
+    },
+    {
+        title: "CONTINUOUS LEARNING",
+        description:
+            "Technology evolves quickly, and I enjoy exploring new tools, concepts, and engineering practices to continuously improve my craft.",
+        icon: "graduation" as const,
     },
     {
         title: "PROBLEM SOLVING",
         description:
-            "I love solving real-world problems with creative and efficient solutions.",
+            "I enjoy breaking down complex challenges into practical solutions that are easier to build, maintain, and scale.",
         icon: "lightbulb" as const,
     },
     {
-        title: "DESIGN & USER EXPERIENCE",
+        title: "ATTENTION TO DETAIL",
         description:
-            "I enjoy creating intuitive and visually appealing digital experiences.",
-        icon: "pen" as const,
+            "Small details shape the overall experience. I value clarity, consistency, and thoughtful execution in both code and design.",
+        icon: "scan" as const,
+    },
+    {
+        title: "BEYOND CODE",
+        description:
+            "Reading literature, philosophy, and technology helps me approach problems from different perspectives and think more deeply about the systems I build.",
+        icon: "book" as const,
     },
 ] as const;
 
 export const approachIntro =
-    "I believe every project is unique and deserves a thoughtful approach. From planning to development, I focus on understanding the problem, crafting the right solution, and delivering value.";
+    "Every project begins with curiosity. I focus on understanding the problem, exploring possible solutions, and building software that is reliable, practical, and thoughtfully designed.";
 
 export const approachSteps = [
     {
         number: "01",
-        title: "UNDERSTAND",
-        description: "I analyze requirements and understand the goals.",
+        title: "UNDERSTAND THE PROBLEM",
+        description:
+            "Before writing code, I spend time understanding the problem, the users, and the constraints that shape the solution.",
     },
     {
         number: "02",
-        title: "PLAN",
-        description: "I plan the architecture and the best approach.",
+        title: "THINK IN SYSTEMS",
+        description:
+            "I enjoy breaking complex ideas into smaller components and understanding how different parts of a system work together.",
     },
     {
         number: "03",
-        title: "BUILD",
-        description: "I write clean code and build with precision.",
+        title: "BUILD WITH INTENTION",
+        description:
+            "Whether developing a backend service or a user interface, I prioritize clarity, maintainability, and long-term reliability.",
     },
     {
         number: "04",
-        title: "DELIVER",
-        description: "I test thoroughly and deliver high-quality solutions.",
+        title: "LEARN & ITERATE",
+        description:
+            "Every project teaches something new. I continuously refine my approach through experimentation, feedback, and reflection.",
     },
 ] as const;

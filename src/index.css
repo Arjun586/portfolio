@@ -14,6 +14,7 @@
 
     --font-heading: "Bebas Neue", sans-serif;
     --font-body: "IBM Plex Sans", sans-serif;
+    --font-signature: "Caveat", cursive;
 
     /* Typography scale */
     --text-display-xl: 7.5rem; /* 120px — hero names */
@@ -32,6 +33,10 @@
 
 @utility font-body {
     font-family: var(--font-body);
+}
+
+@utility font-signature {
+    font-family: var(--font-signature);
 }
 
 /* ── Layout spacing (8 / 16 / 24 / 32 / 48 / 64) ── */

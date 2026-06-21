@@ -1,5 +1,4 @@
 import { skillsHero } from "../../data/skillsPage";
-import { HeroQuoteColumn } from "../ui/HeroQuoteColumn";
 import { PortraitImage } from "../ui/PortraitImage";
 
 export function SkillsHero() {
@@ -24,7 +23,6 @@ export function SkillsHero() {
             </div>
 
             <PortraitImage />
-            <HeroQuoteColumn quote={skillsHero.quote} />
         </section>
     );
 }

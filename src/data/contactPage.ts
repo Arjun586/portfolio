@@ -4,7 +4,11 @@ export const contactHero = {
     subtitle: "LET'S BUILD SOMETHING GREAT",
     description:
         "Have a project in mind or want to collaborate? I'm always open to discussing new opportunities, ideas and challenges.",
-    quote: "THE BEST PROJECTS START WITH A CONVERSATION.",
+} as const;
+
+export const contactHeroQuote = {
+    text: "So we beat on, boats against the current.",
+    author: "F. Scott Fitzgerald",
 } as const;
 
 export const contactDetails = [
@@ -26,8 +30,3 @@ export const availableFor = [
     "UI/UX Collaboration",
     "Technical Consulting",
 ] as const;
-
-export const contactFooterQuote = {
-    text: "GREAT THINGS HAPPEN WHEN WE WORK TOGETHER.",
-    author: "— Arjun",
-} as const;

@@ -38,11 +38,6 @@ export const databaseSkills = [
 export const toolsLeft  = ["Git & GitHub", "VS Code", "Postman", "Docker", "Figma"] as const;
 export const toolsRight = ["CI / CD", "Vercel / Netlify", "ESLint / Prettier", "Thunder Client", "Linux Basics"] as const;
 
-export const skillsFooterQuote = {
-    text: "THE MORE YOU LEARN, THE MORE YOU EARN.",
-    author: "— Arjun",
-} as const;
-
 export type SkillIconKey =
     | (typeof frontendSkills)[number]["icon"]
     | (typeof backendSkills)[number]["icon"]

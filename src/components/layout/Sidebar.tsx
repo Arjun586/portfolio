@@ -18,12 +18,12 @@ export function Sidebar() {
                 <NavLink
                     to="/"
                     end
-                    className="font-heading text-card-title leading-[0.9] tracking-tight transition-opacity hover:opacity-70"
+                    className="font-heading text-section leading-[0.9] tracking-tight transition-opacity hover:opacity-70"
                 >
                     ARJUN
                 </NavLink>
 
-                <div className="mt-8 ml-0.5 h-16 w-px shrink-0 bg-border-default" />
+                <div className="mt-4 ml-0.5 h-12 w-px shrink-0 bg-border-default" />
 
                 <nav className="mt-8 flex-1 space-y-6">
                     {navItems.map((item) => (

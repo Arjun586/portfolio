@@ -25,14 +25,11 @@ export const aboutText =
     "I'm a full stack developer with a passion for building meaningful digital experiences. My focus is on creating applications that are not only functional but also intuitive and user-friendly.";
 
 export const heroBio =
-    "Building software that solves real problems, not just fills portfolios.";
+    "Building software with clarity, purpose, and craft.";
 
-export const heroQuote =
-    "CODE IS LIKE HUMOR. WHEN YOU HAVE TO EXPLAIN IT, IT'S BAD.";
-
-export const footerQuote = {
-    text: "GOOD DESIGN IS GOOD BUSINESS.",
-    author: "Thomas J. Watson",
+export const heroQuote ={
+    text: "To go wrong in one's own way is better than to go right in someone else's.",
+    author: "Fyodor Dostoevsky",
 } as const;
 
 export const footerCta = {

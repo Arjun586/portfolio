@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { aboutHero } from "../../data/about";
+import { aboutHero, aboutHeroQuote } from "../../data/about";
 import { Button } from "../ui/Button";
 import { HeroQuoteColumn } from "../ui/HeroQuoteColumn";
 import { PortraitImage } from "../ui/PortraitImage";
@@ -28,14 +28,14 @@ export function AboutHero() {
                     {aboutHero.bio}
                 </p>
 
-                <Link to="/contact">
-                    <Button className="mt-6 xl:mt-8">DOWNLOAD RESUME</Button>
+                <Link to="/contact" className="mt-6 inline-block w-fit xl:mt-8">
+                    <Button>DOWNLOAD RESUME</Button>
                 </Link>
             </div>
 
             <PortraitImage alt="Arjun" />
 
-            <HeroQuoteColumn quote={aboutHero.quote} author="Arjun" />
+            <HeroQuoteColumn quote={aboutHeroQuote.text} author={aboutHeroQuote.author} />
         </section>
     );
 }
