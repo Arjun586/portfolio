@@ -1,14 +1,12 @@
 import { Code2, FolderOpen, GraduationCap } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { experienceSnapshot } from "../../data/experience";
-
 const snapshotIcons = {
     folder: FolderOpen,
     code: Code2,
     github: FaGithub,
     graduation: GraduationCap,
 } as const;
-
 export function ExperienceSnapshot() {
     return (
         <section className="border-b border-border-default">

@@ -59,11 +59,11 @@ export function ExperienceMiddleSection() {
                 <h2 className="font-heading text-section tracking-wide">HIGHLIGHTS</h2>
                 <div className="mt-6 divide-y divide-border-subtle">
                     {highlights.map((item) => (
-                        <div key={item.number} className="flex gap-4 py-4 first:pt-0 last:pb-0">
+                        <div key={item.number} className="flex items-start gap-4 py-4 first:pt-0 last:pb-0">
                             <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-accent bg-secondary/50 font-heading text-small text-accent">
                                 {item.number}
                             </span>
-                            <p className="pt-1 text-body leading-relaxed">{item.text}</p>
+                            <p className="text-body leading-relaxed">{item.text}</p>
                         </div>
                     ))}
                 </div>

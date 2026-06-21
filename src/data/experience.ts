@@ -81,8 +81,8 @@ export const highlights = [
 ] as const;
 
 export const experienceSnapshot = [
-    { value: "15+", label: "PROJECTS COMPLETED", icon: "folder" as const },
-    { value: "20+", label: "TECHNOLOGIES USED", icon: "code" as const },
-    { value: "50+", label: "GITHUB REPOSITORIES", icon: "github" as const },
-    { value: "3+", label: "YEARS LEARNING", icon: "graduation" as const },
+    { value: "B.TECH", label: "CSE (AI & ML)", icon: "code" as const },
+    { value: "OPEN", label: "TO INTERNSHIPS", icon: "graduation" as const },
+    { value: "15+", label: "PROJECTS BUILT", icon: "folder" as const },
+    { value: "3+", label: "YEARS CODING", icon: "github" as const },
 ] as const;
