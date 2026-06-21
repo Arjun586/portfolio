@@ -13,7 +13,7 @@
     --color-border-subtle: rgb(18 18 18 / 0.25);
 
     --font-heading: "Bebas Neue", sans-serif;
-    --font-body: "Merriweather", serif;
+    --font-body: "IBM Plex Sans", sans-serif;
 
     /* Typography scale */
     --text-display-xl: 7.5rem; /* 120px — hero names */
@@ -21,7 +21,7 @@
     --text-section: 3rem; /* 48px — section titles */
     --text-card-title: 1.5rem; /* 24px — quotes, card titles */
     --text-subheading: 1.125rem; /* 18px — card headings, hero subtitles */
-    --text-body: 1rem; /* 16px — paragraphs */
+    --text-body: 1.0625rem; /* 16px — paragraphs */
     --text-small: 0.875rem; /* 14px — secondary content */
     --text-caption: 0.75rem; /* 12px — labels, metadata */
 }
