@@ -68,9 +68,6 @@ export function ProjectsContent() {
                         </button>
                     ))}
                 </div>
-                <span className="font-heading text-caption tracking-wide opacity-40 xl:text-small">
-                    SORT BY: LATEST ↓
-                </span>
             </div>
 
             {/* Projects grid */}

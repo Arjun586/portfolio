@@ -1,12 +1,11 @@
 import { contactHero } from "../../data/contactPage";
 import { HeroQuoteColumn } from "../ui/HeroQuoteColumn";
 import { PortraitImage } from "../ui/PortraitImage";
-import { CraftStamp } from "../home/CraftStamp";
 
 export function ContactHero() {
     return (
         <section className="relative grid grid-cols-1 border-b border-border-default lg:grid-cols-[1.15fr_auto_1fr]">
-            <CraftStamp style={{ left: "38%", top: "65%" }} />
+            
 
             <div className="flex flex-col justify-center pad-hero xl:pad-hero-lg">
                 <span className="font-body text-body text-accent italic xl:text-subheading">

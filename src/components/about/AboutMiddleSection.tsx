@@ -31,7 +31,7 @@ export function AboutMiddleSection() {
                     {journey.map((item) => (
                         <div key={item.period} className="relative">
                             {/* Filled circle dot */}
-                            <div className="absolute top-[5px] -left-[1.375rem] h-3 w-3 rounded-full border-2 border-border-strong bg-border-strong" />
+                            <div className="absolute top-[5px] left-[-1.85rem] h-3 w-3 rounded-full border-2 border-border-strong bg-border-strong" />
 
                             <p className="font-heading text-caption tracking-wide text-accent">
                                 {item.period}

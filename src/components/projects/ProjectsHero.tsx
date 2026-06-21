@@ -1,10 +1,9 @@
 import { projectsHero } from "../../data/projects";
-import { CraftStamp } from "../home/CraftStamp";
 
 export function ProjectsHero() {
     return (
         <section className="relative grid grid-cols-1 border-b border-border-default lg:grid-cols-[1.15fr_1fr]">
-            <CraftStamp style={{ left: "42%", top: "68%" }} />
+            
 
             {/* Left: title + description */}
             <div className="flex flex-col justify-center pad-hero xl:pad-hero-lg">

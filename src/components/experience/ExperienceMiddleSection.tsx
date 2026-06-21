@@ -36,12 +36,17 @@ export function ExperienceMiddleSection() {
             <div className="pad-section xl:pad-section-lg">
                 <h2 className="font-heading text-section tracking-wide">PROFESSIONAL JOURNEY</h2>
                 <div className="relative mt-6 space-y-6 pl-6">
-                    <div className="absolute top-1 bottom-1 left-0 w-px bg-border-strong" />
+                    <div className="absolute top-2 bottom-2 left-0 w-px bg-border-strong" />
                     {professionalJourney.map((item) => (
                         <div key={item.period} className="relative">
-                            <div className="absolute top-2 -left-[1.35rem] h-3 w-3 rounded-full border-2 border-border-strong bg-background" />
-                            <p className="font-heading text-caption tracking-wide text-accent">{item.period}</p>
-                            <h3 className="font-heading mt-1 text-subheading tracking-wide">{item.role}</h3>
+                            <div className="absolute top-[5px] left-[-1.85rem] h-3 w-3 rounded-full border-2 border-border-strong bg-border-strong" />
+
+                            <p className="font-heading text-caption tracking-wide text-accent">
+                                {item.period}
+                            </p>
+                            <h3 className="font-heading mt-1 text-subheading tracking-wide">
+                                {item.role}
+                            </h3>
                             <ul className="mt-2 space-y-1">
                                 {item.bullets.map((b) => (
                                     <li key={b} className="flex items-start gap-2 text-small leading-relaxed">

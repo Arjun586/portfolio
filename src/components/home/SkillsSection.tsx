@@ -23,7 +23,7 @@ function TagList({ items }: { items: string[] }) {
 export function SkillsSection() {
     return (
         <section id="skills" className="flex flex-col pad-section xl:pad-section-lg">
-            <h2 className="font-heading text-display leading-[0.9] tracking-tight">SKILLS</h2>
+            <h2 className="font-heading text-section tracking-tight">SKILLS</h2>
             <p className="mt-4 max-w-lg font-heading text-caption tracking-widest text-text/70 uppercase">
                 Technologies I work with to build modern, scalable and user-centric solutions.
             </p>

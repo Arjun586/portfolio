@@ -12,9 +12,6 @@ const snapshotIcons = {
 export function ExperienceSnapshot() {
     return (
         <section className="border-b border-border-default">
-            <div className="flex items-center border-b border-border-default px-6 py-4 xl:px-8">
-                <h2 className="font-heading text-section tracking-wide">EXPERIENCE SNAPSHOT</h2>
-            </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-border-default">
                 {experienceSnapshot.map((stat, index) => {
                     const Icon = snapshotIcons[stat.icon];

@@ -3,7 +3,6 @@ import { heroBio, heroQuote } from "../../data/home";
 import { Button } from "../ui/Button";
 import { HeroQuoteColumn } from "../ui/HeroQuoteColumn";
 import { PortraitImage } from "../ui/PortraitImage";
-import { CraftStamp } from "./CraftStamp";
 
 export function HeroSection() {
     return (
@@ -11,8 +10,6 @@ export function HeroSection() {
             id="home"
             className="relative grid grid-cols-1 border-b border-border-default lg:grid-cols-[1.15fr_auto_1fr]"
         >
-            <CraftStamp />
-
             <div className="flex flex-col justify-center pad-hero xl:pad-hero-lg">
                 <span className="font-body text-body text-accent italic xl:text-subheading">
                     HELLO, I&apos;M
@@ -32,8 +29,8 @@ export function HeroSection() {
                     {heroBio}
                 </p>
 
-                <Link to="/projects">
-                    <Button className="mt-6 xl:mt-8">VIEW MY WORK</Button>
+                <Link to="/projects" className="mt-6 inline-block w-fit xl:mt-8">
+                    <Button>VIEW MY WORK</Button>
                 </Link>
             </div>
 

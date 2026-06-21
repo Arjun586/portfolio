@@ -5,11 +5,9 @@ import { ProjectPreview } from "./ProjectPreview";
 export function FeaturedProjects() {
     return (
         <section id="projects" className="flex flex-col pad-section xl:pad-section-lg">
-            <div className="flex items-end justify-between gap-4 border-b border-border-strong pb-4">
+            <div className="flex items-baseline justify-between gap-4 border-b border-border-strong pb-4">
                 <h2 className="font-heading text-section tracking-wide">FEATURED PROJECTS</h2>
-                <Link to="/projects" className="link-arrow shrink-0 pb-0.5">
-                    VIEW ALL PROJECTS
-                </Link>
+                <Link to="projects" className="link-arrow shrink-0">VIEW ALL PROJECTS</Link>
             </div>
 
             <div className="mt-6 grid grid-cols-3 gap-4 xl:gap-6">
