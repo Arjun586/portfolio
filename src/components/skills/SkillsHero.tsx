@@ -8,7 +8,7 @@ export function SkillsHero() {
                     {skillsHero.label}
                 </span>
 
-                <h1 className="font-heading text-display-xl leading-[0.9] tracking-tight">
+                <h1 className="font-heading text-hero-display leading-[0.9] tracking-tight">
                     {skillsHero.title}
                 </h1>
 

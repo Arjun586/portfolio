@@ -11,7 +11,7 @@ export function ContactHero() {
                 <span className="font-body text-body text-accent italic xl:text-subheading">
                     {contactHero.label}
                 </span>
-                <h1 className="font-heading text-display-xl leading-[0.9] tracking-tight">
+                <h1 className="font-heading text-hero-display leading-[0.9] tracking-tight">
                     {contactHero.title}
                 </h1>
                 <h2 className="font-heading mt-4 text-subheading tracking-wide uppercase">

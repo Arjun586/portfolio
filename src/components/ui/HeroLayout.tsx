@@ -54,7 +54,7 @@ export function HeroLayout({
                     {label}
                 </span>
 
-                <h1 className="font-heading text-display-xl leading-[0.85] tracking-tight">
+                <h1 className="font-heading text-hero-display leading-[0.85] tracking-tight">
                     {title}
                 </h1>
 

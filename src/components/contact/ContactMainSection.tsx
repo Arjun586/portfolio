@@ -1,5 +1,6 @@
 import { Check, Clock, Mail, MapPin } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { availableFor, contactDetails, socialLinks } from "../../data/contactPage";
 import { ContactForm } from "./ContactForm";
 
@@ -16,6 +17,7 @@ function SocialIcon({ type }: { type: (typeof socialLinks)[number]["icon"] }) {
     const size = 20;
     if (type === "github")   return <FaGithub size={size} className={className} />;
     if (type === "linkedin") return <FaLinkedinIn size={size} className={className} />;
+    if (type === "x")        return <FaXTwitter size={size} className={className} />;
     return <Mail size={size} className={className} />;
 }
 
@@ -52,7 +54,7 @@ export function ContactMainSection() {
             <div className="border-t border-border-default pad-section lg:border-t-0 xl:pad-section-lg">
                 <h2 className="font-heading text-section tracking-wide">LET&apos;S CONNECT</h2>
                 <div className="divider-strong mt-3 max-w-[120px]" />
-                <div className="mt-6 grid grid-cols-3 gap-4">
+                <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
                     {socialLinks.map((link) => (
                         <a
                             key={link.label}

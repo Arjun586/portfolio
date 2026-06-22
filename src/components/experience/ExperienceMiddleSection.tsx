@@ -2,9 +2,9 @@ import { currentlyExploring, growthTimeline, highlights } from "../../data/exper
 
 export function ExperienceMiddleSection() {
     return (
-        <section className="grid grid-cols-1 border-b border-border-default lg:grid-cols-3 lg:items-stretch lg:divide-x lg:divide-border-default">
+        <section className="grid min-w-0 grid-cols-1 border-b border-border-default lg:grid-cols-3 lg:items-stretch lg:divide-x lg:divide-border-default">
             {/* GROWTH TIMELINE */}
-            <div className="pad-section xl:pad-section-lg">
+            <div className="min-w-0 pad-section xl:pad-section-lg">
                 <h2 className="font-heading text-section tracking-wide">GROWTH TIMELINE</h2>
                 <div className="relative mt-6 space-y-6 pl-6">
                     <div className="absolute top-2 bottom-2 left-0 w-px bg-border-strong" />
@@ -35,13 +35,13 @@ export function ExperienceMiddleSection() {
             </div>
 
             {/* CURRENTLY EXPLORING */}
-            <div className="flex flex-col border-t border-border-default pad-section lg:border-t-0 xl:pad-section-lg">
+            <div className="flex min-w-0 flex-col border-t border-border-default pad-section lg:border-t-0 xl:pad-section-lg">
                 <h2 className="font-heading text-section tracking-wide">CURRENTLY EXPLORING</h2>
-                <div className="mt-6 flex flex-1 flex-col gap-4">
+                <div className="mt-5 flex flex-1 flex-col gap-3 sm:mt-6 sm:gap-4">
                     {currentlyExploring.map((item) => (
                         <div
                             key={item.title}
-                            className="flex flex-1 flex-col justify-center border border-border-subtle bg-[rgb(221_208_181/0.35)] px-4 py-5 xl:px-5 xl:py-6"
+                            className="flex flex-col justify-center border border-border-subtle bg-[rgb(221_208_181/0.35)] px-4 py-3.5 sm:flex-1 sm:py-5 xl:px-5 xl:py-6"
                         >
                             <h3 className="font-heading text-subheading tracking-wide">
                                 {item.title}
@@ -55,15 +55,15 @@ export function ExperienceMiddleSection() {
             </div>
 
             {/* HIGHLIGHTS */}
-            <div className="border-t border-border-default pad-section lg:border-t-0 xl:pad-section-lg">
+            <div className="min-w-0 border-t border-border-default pad-section lg:border-t-0 xl:pad-section-lg">
                 <h2 className="font-heading text-section tracking-wide">HIGHLIGHTS</h2>
                 <div className="mt-6 divide-y divide-border-subtle">
                     {highlights.map((item) => (
-                        <div key={item.number} className="flex items-start gap-4 py-4 first:pt-0 last:pb-0">
+                        <div key={item.number} className="flex min-w-0 items-start gap-4 py-4 first:pt-0 last:pb-0">
                             <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-accent bg-secondary/50 font-heading text-small text-accent">
                                 {item.number}
                             </span>
-                            <p className="text-body leading-relaxed">{item.text}</p>
+                            <p className="min-w-0 text-body leading-relaxed">{item.text}</p>
                         </div>
                     ))}
                 </div>

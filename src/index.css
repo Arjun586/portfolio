@@ -39,6 +39,23 @@
     font-family: var(--font-signature);
 }
 
+/* Responsive hero titles: mobile → tablet → desktop (lg+ unchanged at 7.5rem) */
+.text-hero-display {
+    font-size: 2.75rem;
+}
+
+@media (width >= 640px) {
+    .text-hero-display {
+        font-size: 4.5rem;
+    }
+}
+
+@media (width >= 1024px) {
+    .text-hero-display {
+        font-size: var(--text-display-xl);
+    }
+}
+
 /* ── Layout spacing (8 / 16 / 24 / 32 / 48 / 64) ── */
 
 @utility pad-section {

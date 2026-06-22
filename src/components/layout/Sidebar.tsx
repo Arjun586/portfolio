@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const navItems = [
     { number: "01", label: "HOME", to: "/" },
@@ -65,6 +66,15 @@ export function Sidebar() {
                         className="transition-opacity hover:opacity-70"
                     >
                         <FaLinkedinIn size={18} />
+                    </a>
+                    <a
+                        href="https://x.com/Arjun88823705"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="X profile"
+                        className="transition-opacity hover:opacity-70"
+                    >
+                        <FaXTwitter size={18} />
                     </a>
                     <NavLink
                         to="/contact"

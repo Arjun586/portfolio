@@ -7,7 +7,7 @@ export function ProjectsHero() {
                 <span className="font-body text-body text-accent italic xl:text-subheading">
                     {projectsHero.label}
                 </span>
-                <h1 className="font-heading text-display-xl leading-[0.9] tracking-tight">
+                <h1 className="font-heading text-hero-display leading-[0.9] tracking-tight">
                     {projectsHero.title}
                 </h1>
                 <div className="divider-strong mt-2 max-w-xs" />
