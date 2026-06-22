@@ -58,12 +58,17 @@ export const developerTools = [
 ] as const;
 
 export const csFoundations = [
-    "Data Structures & Algorithms",
-    "Object-Oriented Programming",
-    "DBMS",
-    "Operating Systems",
-    "Computer Networks",
+    {
+        label: "Data Structures & Algorithms",
+        link: "https://leetcode.com/u/arjun586/",
+    },
+    { label: "Object-Oriented Programming" },
+    { label: "DBMS" },
+    { label: "Operating Systems" },
+    { label: "Computer Networks" },
 ] as const;
+
+export type CSFoundationItem = (typeof csFoundations)[number];
 
 export type SkillEmphasis = "primary" | "secondary" | "tertiary";
 

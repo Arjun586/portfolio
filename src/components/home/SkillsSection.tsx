@@ -20,31 +20,31 @@ function TagList({ items }: { items: string[] }) {
     );
 }
 
+function SkillGroup({ title, items }: { title: string; items: string[] }) {
+    return (
+        <div>
+            <div className="w-fit">
+                <h3 className="font-heading text-subheading tracking-wide">{title}</h3>
+                <div className="divider-strong mt-3" />
+            </div>
+            <TagList items={items} />
+        </div>
+    );
+}
+
 export function SkillsSection() {
     return (
-        <section id="skills" className="flex flex-col pad-section xl:pad-section-lg">
+        <section id="skills" className="flex min-w-0 flex-col pad-section xl:pad-section-lg">
             <h2 className="font-heading text-section tracking-tight">SKILLS</h2>
             <p className="mt-4 max-w-lg font-heading text-caption tracking-widest text-text/70 uppercase">
                 Technologies I work with to build modern, scalable and user-centric solutions.
             </p>
 
             <div className="mt-10 space-y-8">
-                <div>
-                    <h3 className="font-heading text-subheading tracking-wide">FRONTEND</h3>
-                    <TagList items={frontend} />
-                </div>
-                <div>
-                    <h3 className="font-heading text-subheading tracking-wide">BACKEND</h3>
-                    <TagList items={backend} />
-                </div>
-                <div>
-                    <h3 className="font-heading text-subheading tracking-wide">DATABASE</h3>
-                    <TagList items={database} />
-                </div>
-                <div>
-                    <h3 className="font-heading text-subheading tracking-wide">TOOLS &amp; DEVOPS</h3>
-                    <TagList items={tools} />
-                </div>
+                <SkillGroup title="FRONTEND" items={frontend} />
+                <SkillGroup title="BACKEND" items={backend} />
+                <SkillGroup title="DATABASE" items={database} />
+                <SkillGroup title="TOOLS & DEVOPS" items={tools} />
             </div>
 
             <Link to="/skills" className="link-arrow mt-8">SEE ALL SKILLS</Link>
