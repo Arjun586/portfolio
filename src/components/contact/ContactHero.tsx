@@ -4,10 +4,10 @@ import { PortraitImage } from "../ui/PortraitImage";
 
 export function ContactHero() {
     return (
-        <section className="relative grid grid-cols-1 border-b border-border-default lg:grid-cols-[1.15fr_auto_1fr]">
+        <section className="relative grid grid-cols-1 items-start border-b border-border-default lg:grid-cols-[1.15fr_auto_1fr]">
             
 
-            <div className="flex flex-col justify-center pad-hero xl:pad-hero-lg">
+            <div className="flex flex-col justify-start pad-hero xl:pad-hero-lg">
                 <span className="font-body text-body text-accent italic xl:text-subheading">
                     {contactHero.label}
                 </span>

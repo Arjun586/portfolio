@@ -12,7 +12,7 @@ export function HeroQuoteColumn({
     showLocation = true,
 }: HeroQuoteColumnProps) {
     return (
-        <div className="flex flex-col justify-center pad-hero xl:pad-hero-lg">
+        <div className="flex flex-col justify-start pad-hero xl:pad-hero-lg">
             <div className="font-heading text-display leading-none text-accent">
                 &ldquo;
             </div>

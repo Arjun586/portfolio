@@ -1,102 +1,115 @@
-import type { ReactNode } from "react";
-import { Cloud, Code2, Database, Shield, Wrench } from "lucide-react";
-import {
-    SiCss, SiExpress, SiGraphql, SiHtml5, SiJavascript,
-    SiMongodb, SiMysql, SiNextdotjs, SiNodedotjs, SiPostgresql,
-    SiPrisma, SiReact, SiRedux, SiSass, SiSocketdotio,
-    SiTailwindcss, SiTypescript,
-} from "react-icons/si";
-import type { SkillIconKey } from "../../data/skillsPage";
-import { backendSkills, databaseSkills, frontendSkills, toolsLeft, toolsRight } from "../../data/skillsPage";
+import { csFoundations, skillCategories, type SkillCategory, type SkillEmphasis, type SkillItem } from "../../data/skillsPage";
+import { SkillIcon } from "../ui/SkillIcon";
 
-function SkillIcon({ type }: { type: SkillIconKey }) {
-    const className = "text-text";
-    const size = 22;
-    const icons: Record<SkillIconKey, ReactNode> = {
-        html5: <SiHtml5 size={size} className={className} />,
-        css3: <SiCss size={size} className={className} />,
-        javascript: <SiJavascript size={size} className={className} />,
-        typescript: <SiTypescript size={size} className={className} />,
-        react: <SiReact size={size} className={className} />,
-        nextjs: <SiNextdotjs size={size} className={className} />,
-        tailwind: <SiTailwindcss size={size} className={className} />,
-        redux: <SiRedux size={size} className={className} />,
-        sass: <SiSass size={size} className={className} />,
-        nodejs: <SiNodedotjs size={size} className={className} />,
-        express: <SiExpress size={size} className={className} />,
-        api: <Cloud size={20} className={className} />,
-        jwt: <Shield size={20} className={className} />,
-        graphql: <SiGraphql size={size} className={className} />,
-        socketio: <SiSocketdotio size={size} className={className} />,
-        mongodb: <SiMongodb size={size} className={className} />,
-        postgresql: <SiPostgresql size={size} className={className} />,
-        prisma: <SiPrisma size={size} className={className} />,
-        mysql: <SiMysql size={size} className={className} />,
-    };
-    return icons[type];
-}
+const emphasisStyles: Record<
+    SkillEmphasis,
+    { heading: string; divider: string; grid: string; iconSize: number }
+> = {
+    primary: {
+        heading: "font-heading text-section tracking-wide",
+        divider: "divider-strong mt-3 max-w-xs",
+        grid: "mt-6 grid min-w-0 grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4",
+        iconSize: 22,
+    },
+    secondary: {
+        heading: "font-heading text-card-title tracking-wide xl:text-section",
+        divider: "divider-strong mt-3 max-w-[140px]",
+        grid: "mt-5 grid min-w-0 grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4",
+        iconSize: 22,
+    },
+    tertiary: {
+        heading: "font-heading text-subheading tracking-wide text-accent xl:text-card-title",
+        divider: "divider-strong mt-3 max-w-[120px]",
+        grid: "mt-5 grid min-w-0 grid-cols-2 gap-3",
+        iconSize: 20,
+    },
+};
 
-function SkillCard({ name, icon }: { name: string; icon: SkillIconKey }) {
+function SkillCard({ name, icon, iconSize }: SkillItem & { iconSize: number }) {
     return (
         <div className="skill-card">
-            <SkillIcon type={icon} />
-            <span className="font-body text-center text-caption font-bold leading-tight">{name}</span>
+            <SkillIcon type={icon} size={iconSize} />
+            <span className="font-body text-center text-caption font-bold leading-tight">
+                {name}
+            </span>
         </div>
     );
 }
 
-function ToolsList({ items }: { items: readonly string[] }) {
+function SkillCategoryBlock({ category }: { category: SkillCategory }) {
+    const styles = emphasisStyles[category.emphasis];
+
     return (
-        <ul>
-            {items.map((item) => (
-                <li key={item} className="border-b border-dashed border-border-subtle py-4 font-heading text-small tracking-wide last:border-b-0">
-                    {item}
-                </li>
+        <div className="min-w-0 pad-section xl:pad-section-lg">
+            <h2 className={styles.heading}>{category.title}</h2>
+            <div className={styles.divider} />
+            <div className={styles.grid}>
+                {category.skills.map((skill) => (
+                    <SkillCard key={skill.name} {...skill} iconSize={styles.iconSize} />
+                ))}
+            </div>
+        </div>
+    );
+}
+
+function SkillCategoryRow({
+    categories,
+    bordered = true,
+}: {
+    categories: readonly SkillCategory[];
+    bordered?: boolean;
+}) {
+    return (
+        <div
+            className={[
+                "grid min-w-0 grid-cols-1 lg:grid-cols-2 lg:divide-x lg:divide-border-default",
+                bordered ? "border-b border-border-default" : "",
+            ].join(" ")}
+        >
+            {categories.map((category, index) => (
+                <div
+                    key={category.id}
+                    className={index > 0 ? "border-t border-border-default lg:border-t-0" : ""}
+                >
+                    <SkillCategoryBlock category={category} />
+                </div>
             ))}
-        </ul>
+        </div>
+    );
+}
+
+function CSFoundationsSection() {
+    return (
+        <div className="min-w-0 pad-section xl:pad-section-lg">
+            <h2 className="font-heading text-subheading tracking-wide text-accent xl:text-card-title">
+                COMPUTER SCIENCE FOUNDATIONS
+            </h2>
+            <div className="divider-strong mt-3 max-w-[120px]" />
+            <p className="mt-4 max-w-2xl text-body leading-relaxed">
+                Core concepts that shape how I approach problem solving, system design, and
+                software engineering decisions.
+            </p>
+            <ul className="mt-6 divide-y divide-border-subtle border-y border-border-subtle">
+                {csFoundations.map((item, index) => (
+                    <li key={item} className="flex items-baseline gap-6 py-5">
+                        <span className="font-heading text-caption tabular-nums text-accent">
+                            {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span className="font-heading text-subheading tracking-wide">{item}</span>
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 }
 
 export function SkillsGridSection() {
     return (
-        <section className="grid grid-cols-1 border-b border-border-default lg:grid-cols-3 lg:divide-x lg:divide-border-default">
-            <div className="pad-section xl:pad-section-lg">
-                <div className="flex items-center gap-4">
-                    <Code2 size={18} className="text-accent" />
-                    <h2 className="font-heading text-section tracking-wide">FRONTEND</h2>
-                </div>
-                <div className="mt-6 grid grid-cols-3 gap-4">
-                    {frontendSkills.map((s) => <SkillCard key={s.name} name={s.name} icon={s.icon} />)}
-                </div>
-            </div>
-
-            <div className="border-t border-border-default pad-section lg:border-t-0 xl:pad-section-lg">
-                <div className="flex items-center gap-4">
-                    <Database size={18} className="text-accent" />
-                    <h2 className="font-heading text-section tracking-wide">BACKEND</h2>
-                </div>
-                <div className="mt-6 grid grid-cols-3 gap-4">
-                    {backendSkills.map((s) => <SkillCard key={s.name} name={s.name} icon={s.icon} />)}
-                </div>
-                <div className="mt-8 flex items-center gap-4">
-                    <Database size={16} className="text-accent" />
-                    <h3 className="font-heading text-subheading tracking-wide text-accent">DATABASE</h3>
-                </div>
-                <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
-                    {databaseSkills.map((s) => <SkillCard key={s.name} name={s.name} icon={s.icon} />)}
-                </div>
-            </div>
-
-            <div className="border-t border-border-default pad-section lg:border-t-0 xl:pad-section-lg">
-                <div className="flex items-center gap-4">
-                    <Wrench size={18} className="text-accent" />
-                    <h2 className="font-heading text-section tracking-wide">TOOLS &amp; OTHERS</h2>
-                </div>
-                <div className="mt-6 grid grid-cols-2 gap-x-8">
-                    <ToolsList items={toolsLeft} />
-                    <ToolsList items={toolsRight} />
-                </div>
-            </div>
+        <section className="max-w-full border-b border-border-default">
+            <SkillCategoryRow categories={skillCategories.primary} />
+            <SkillCategoryRow categories={skillCategories.secondary} />
+            <SkillCategoryRow categories={skillCategories.tertiary} bordered={false} />
+            <CSFoundationsSection />
         </section>
     );
 }

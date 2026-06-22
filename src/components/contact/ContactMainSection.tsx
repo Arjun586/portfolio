@@ -1,4 +1,4 @@
-import { Check, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Check, Clock, Mail, MapPin } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { availableFor, contactDetails, socialLinks } from "../../data/contactPage";
 import { Button } from "../ui/Button";
@@ -7,7 +7,6 @@ function DetailIcon({ type }: { type: (typeof contactDetails)[number]["icon"] })
     const className = "text-text";
     const size = 18;
     if (type === "mail")     return <Mail size={size} className={className} />;
-    if (type === "phone")    return <Phone size={size} className={className} />;
     if (type === "location") return <MapPin size={size} className={className} />;
     return <Clock size={size} className={className} />;
 }

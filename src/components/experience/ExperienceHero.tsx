@@ -1,10 +1,9 @@
 import { experienceHero } from "../../data/experience";
-import { PortraitImage } from "../ui/PortraitImage";
 
 export function ExperienceHero() {
     return (
-        <section className="relative grid grid-cols-1 border-b border-border-default lg:grid-cols-[minmax(0,1fr)_auto]">
-            <div className="flex flex-col justify-center pad-hero xl:pad-hero-lg">
+        <section className="relative border-b border-border-default">
+            <div className="flex flex-col justify-start pad-hero xl:pad-hero-lg">
                 <span className="font-body text-body text-accent italic xl:text-subheading">
                     {experienceHero.label}
                 </span>
@@ -13,21 +12,19 @@ export function ExperienceHero() {
                     {experienceHero.title}
                 </h1>
 
-                <p className="mt-4 font-heading text-subheading tracking-wide">
+                <p className="mt-2 font-heading text-subheading tracking-wide">
                     {experienceHero.roleLine}
                 </p>
                 <p className="font-heading text-subheading tracking-wide text-accent">
                     {experienceHero.roleLineAccent}
                 </p>
 
-                <div className="divider-strong mt-4 max-w-xs" />
+                <div className="divider-strong mt-2 max-w-xs" />
 
-                <p className="mt-4 max-w-xl text-body leading-relaxed">
+                <p className="mt-2 w-full text-body leading-snug">
                     {experienceHero.bio}
                 </p>
             </div>
-
-            <PortraitImage className="lg:justify-end xl:pl-0 xl:pr-8" />
         </section>
     );
 }

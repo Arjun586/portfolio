@@ -11,7 +11,7 @@ export function PortraitImage({
 }: PortraitImageProps) {
     return (
         <div
-            className={`flex items-start justify-center px-4 py-6 xl:px-6 xl:py-8 ${className}`}
+            className={`flex items-start justify-center pad-hero xl:pad-hero-lg ${className}`}
         >
             <div className="relative pr-5 pb-5 pt-1 xl:pr-6 xl:pb-6">
                 <div

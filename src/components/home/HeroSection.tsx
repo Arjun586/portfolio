@@ -8,9 +8,9 @@ export function HeroSection() {
     return (
         <section
             id="home"
-            className="relative grid grid-cols-1 border-b border-border-default lg:grid-cols-[1.15fr_auto_1fr]"
+            className="relative grid grid-cols-1 items-start border-b border-border-default lg:grid-cols-[1.15fr_auto_1fr]"
         >
-            <div className="flex flex-col justify-center pad-hero xl:pad-hero-lg">
+            <div className="flex flex-col justify-start pad-hero xl:pad-hero-lg">
                 <span className="font-body text-body text-accent italic xl:text-subheading">
                     HELLO, I&apos;M
                 </span>
