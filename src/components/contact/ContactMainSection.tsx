@@ -1,7 +1,7 @@
 import { Check, Clock, Mail, MapPin } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { availableFor, contactDetails, socialLinks } from "../../data/contactPage";
-import { Button } from "../ui/Button";
+import { ContactForm } from "./ContactForm";
 
 function DetailIcon({ type }: { type: (typeof contactDetails)[number]["icon"] }) {
     const className = "text-text";
@@ -26,25 +26,7 @@ export function ContactMainSection() {
             <div className="pad-section xl:pad-section-lg">
                 <h2 className="font-heading text-section tracking-wide">SEND ME A MESSAGE</h2>
                 <div className="divider-strong mt-3 max-w-[180px]" />
-                <form className="mt-6 space-y-5" onSubmit={(e) => e.preventDefault()}>
-                    <div className="form-field">
-                        <label className="form-label" htmlFor="contact-name">YOUR NAME</label>
-                        <input id="contact-name" type="text" placeholder="Enter your name" className="form-input" />
-                    </div>
-                    <div className="form-field">
-                        <label className="form-label" htmlFor="contact-email">YOUR EMAIL</label>
-                        <input id="contact-email" type="email" placeholder="Enter your email" className="form-input" />
-                    </div>
-                    <div className="form-field">
-                        <label className="form-label" htmlFor="contact-subject">SUBJECT</label>
-                        <input id="contact-subject" type="text" placeholder="Enter subject" className="form-input" />
-                    </div>
-                    <div className="form-field">
-                        <label className="form-label" htmlFor="contact-message">YOUR MESSAGE</label>
-                        <textarea id="contact-message" rows={5} placeholder="Write your message..." className="form-input resize-none" />
-                    </div>
-                    <Button type="submit">SEND MESSAGE</Button>
-                </form>
+                <ContactForm />
             </div>
 
             {/* CONTACT DETAILS */}
