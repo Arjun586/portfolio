@@ -1,0 +1,11 @@
+# robots.txt — Vansh Sharma Portfolio
+#
+# DOMAIN PLACEHOLDER
+# After buying and connecting a custom domain, replace
+# https://your-domain.com below with your live URL
+# (e.g. https://vanshsharma.dev).
+
+User-agent: *
+Allow: /
+
+Sitemap: https://your-domain.com/sitemap.xml

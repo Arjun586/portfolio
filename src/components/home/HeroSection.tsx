@@ -20,7 +20,7 @@ export function HeroSection() {
                 </h1>
 
                 <h2 className="font-heading mt-4 text-subheading tracking-widest uppercase">
-                    SOFTWARE ENGINEER
+                    FULL STACK DEVELOPER
                 </h2>
 
                 <div className="divider-strong mt-4" />

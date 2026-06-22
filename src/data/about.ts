@@ -1,7 +1,7 @@
 export const aboutHero = {
     label: "ABOUT ME",
     title: "Arjun",
-    subtitle: "SOFTWARE ENGINEER",
+    subtitle: "FULL STACK DEVELOPER",
     bio: "I approach software development with a focus on clarity, usability, and attention to detail. Whether building backend systems or refining user experiences, I value purposeful design and thoughtful execution.",
 } as const;
 

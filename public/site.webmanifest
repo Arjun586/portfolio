@@ -1,0 +1,23 @@
+{
+  "name": "Vansh Sharma | Full Stack Developer",
+  "short_name": "Vansh Sharma",
+  "description": "Full Stack Developer specializing in MERN Stack, TypeScript, and AI/ML.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ddd0b5",
+  "theme_color": "#8f6828",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
