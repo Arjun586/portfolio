@@ -1,5 +1,5 @@
 const HOUR_MS = 60 * 60 * 1000;
-const MAX_REQUESTS = 5;
+const MAX_REQUESTS = 10;
 
 type RateLimitStore = Map<string, number[]>;
 
