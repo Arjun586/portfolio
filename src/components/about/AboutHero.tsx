@@ -28,8 +28,8 @@ export function AboutHero() {
                     {aboutHero.bio}
                 </p>
 
-                <Link to="/contact" className="mt-6 inline-block w-fit xl:mt-8">
-                    <Button>DOWNLOAD RESUME</Button>
+                <Link to="/resume" className="mt-6 inline-block w-fit xl:mt-8">
+                    <Button>VIEW RESUME</Button>
                 </Link>
             </div>
 
