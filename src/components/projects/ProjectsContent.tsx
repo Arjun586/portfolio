@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import {
     allProjects,
     filterProjects,
@@ -7,36 +8,100 @@ import {
     type Project,
     type ProjectFilterId,
 } from "../../data/projects";
-import { ProjectPreview } from "../home/ProjectPreview";
+import { ProjectThumbnail } from "./ProjectThumbnail";
+
+const MAX_TECH_TAGS = 5;
+
+function TechTags({ technologies }: { technologies: string[] }) {
+    const visible = technologies.slice(0, MAX_TECH_TAGS);
+    const remaining = technologies.length - visible.length;
+
+    return (
+        <div className="mt-3 flex flex-wrap gap-2">
+            {visible.map((tech) => (
+                <span
+                    key={tech}
+                    className="border border-border-default bg-transparent px-2 py-1 font-heading text-caption tracking-widest uppercase"
+                >
+                    {tech}
+                </span>
+            ))}
+            {remaining > 0 && (
+                <span className="px-1 font-heading text-caption tracking-widest text-text/50">
+                    +{remaining}
+                </span>
+            )}
+        </div>
+    );
+}
+
+function ProjectActions({ project }: { project: Project }) {
+    if (!project.githubUrl && !project.liveUrl) {
+        return null;
+    }
+
+    return (
+        <div className="mt-4 flex flex-wrap gap-4 border-t border-border-subtle pt-4">
+            {project.githubUrl && (
+                <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-arrow inline-flex items-center gap-2"
+                >
+                    <FaGithub size={14} />
+                    GITHUB
+                </a>
+            )}
+            {project.liveUrl && (
+                <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-arrow inline-flex items-center gap-2"
+                >
+                    <ExternalLink size={14} />
+                    LIVE DEMO
+                </a>
+            )}
+        </div>
+    );
+}
 
 function ProjectCard({ project }: { project: Project }) {
     return (
-        <article className="flex flex-col">
-            {/* Preview thumbnail */}
-            <div className="relative h-[200px] xl:h-[220px] w-full overflow-hidden">
+        <article
+            className={[
+                "flex min-w-0 flex-col",
+                project.featured ? "border-l-2 border-accent pl-4 xl:pl-5" : "",
+            ].join(" ")}
+        >
+            <div className="relative aspect-[16/10] w-full overflow-hidden border border-border-subtle">
                 <span className="absolute top-0 left-0 z-10 border border-border-strong bg-secondary px-2 py-1 font-heading text-caption leading-none">
                     {project.number}
                 </span>
-                <ProjectPreview variant={project.preview} className="h-full w-full" />
+                {project.featured && (
+                    <span className="absolute top-0 right-0 z-10 border border-accent bg-background/90 px-2 py-1 font-heading text-caption tracking-widest text-accent">
+                        FEATURED
+                    </span>
+                )}
+                <ProjectThumbnail
+                    src={project.thumbnail}
+                    alt={`${project.title} preview`}
+                    className="h-full w-full"
+                />
             </div>
 
-            {/* Text content */}
-            <div className="flex flex-1 flex-col pt-4 pb-2">
+            <div className="flex flex-1 flex-col pt-4">
                 <h3 className="font-heading text-subheading leading-none tracking-wide xl:text-card-title">
                     {project.title}
                 </h3>
-                <span className="mt-1 font-heading text-caption tracking-wide text-accent">
+                <span className="mt-2 inline-block w-fit border border-border-default px-2 py-1 font-heading text-caption tracking-wide text-accent">
                     {project.category}
                 </span>
-                <p className="mt-3 text-small leading-relaxed">
-                    {project.description}
-                </p>
-                <a
-                    href={project.url ?? "#"}
-                    className="link-arrow mt-auto pt-4 flex items-center gap-2"
-                >
-                    VIEW PROJECT <ArrowRight size={13} />
-                </a>
+                <p className="mt-3 text-small leading-relaxed">{project.description}</p>
+                <TechTags technologies={project.technologies} />
+                <ProjectActions project={project} />
             </div>
         </article>
     );
@@ -47,10 +112,9 @@ export function ProjectsContent() {
     const filtered = filterProjects(allProjects, activeFilter);
 
     return (
-        <section className="border-b border-border-default">
-            {/* Filter bar */}
-            <div className="flex flex-wrap items-center justify-between gap-4 border-b border-border-default px-6 py-4 xl:px-8">
-                <div className="flex flex-wrap items-center">
+        <section className="max-w-full border-b border-border-default">
+            <div className="flex min-w-0 flex-wrap items-center justify-between gap-4 border-b border-border-default px-6 py-4 xl:px-8">
+                <div className="flex min-w-0 flex-wrap items-center">
                     {projectFilters.map((f, i) => (
                         <button
                             key={f.id}
@@ -58,7 +122,7 @@ export function ProjectsContent() {
                             className={[
                                 "font-heading text-caption tracking-wide transition-opacity xl:text-small",
                                 "py-1",
-                                i > 0 ? "ml-4 pl-4 border-l border-border-default" : "",
+                                i > 0 ? "ml-4 border-l border-border-default pl-4" : "",
                                 activeFilter === f.id
                                     ? "text-text"
                                     : "opacity-40 hover:opacity-70",
@@ -70,23 +134,17 @@ export function ProjectsContent() {
                 </div>
             </div>
 
-            {/* Projects grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid min-w-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {filtered.map((project, idx) => (
                     <div
-                        key={project.title}
+                        key={project.id}
                         className={[
-                            "pad-section xl:pad-section-lg",
-                            // vertical divider between columns
+                            "min-w-0 pad-section xl:pad-section-lg",
                             idx % 3 !== 2 ? "lg:border-r lg:border-border-default" : "",
-                            // horizontal divider for second row
                             idx >= 3 ? "lg:border-t lg:border-border-default" : "",
-                            // sm 2-col dividers
                             idx % 2 === 0 ? "sm:border-r sm:border-border-default" : "",
                             idx >= 2 ? "sm:border-t sm:border-border-default" : "",
-                            // override sm right border on last column in lg
                             idx % 3 === 2 ? "lg:border-r-0" : "",
-                            // remove incorrect sm top borders in lg
                             idx < 3 ? "lg:border-t-0" : "",
                         ].join(" ")}
                     >
