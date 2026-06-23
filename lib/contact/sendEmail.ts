@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import type { ContactFormValues } from "./schema";
+import type { ContactFormValues } from "./schema.js";
 
 export type ContactEmailPayload = Pick<
     ContactFormValues,

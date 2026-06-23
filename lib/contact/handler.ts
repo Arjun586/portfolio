@@ -1,6 +1,6 @@
-import { isRateLimited } from "./rateLimit";
-import { contactFormSchema, mapContactValidationErrors } from "./schema";
-import { sendContactEmail } from "./sendEmail";
+import { isRateLimited } from "./rateLimit.js";
+import { contactFormSchema, mapContactValidationErrors } from "./schema.js";
+import { sendContactEmail } from "./sendEmail.js";
 
 export type ContactHandlerResponse = {
     status: number;
