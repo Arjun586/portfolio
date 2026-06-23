@@ -27,7 +27,5 @@ export const socialLinks = [
 export const availableFor = [
     "Full Stack Development",
     "Web Application Projects",
-    "API Development",
-    "UI/UX Collaboration",
-    "Technical Consulting",
+    "API Development"
 ] as const;
