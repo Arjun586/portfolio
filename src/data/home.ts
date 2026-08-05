@@ -10,7 +10,7 @@ export const skills = [
 export const featuredTechStack = [
     "React.js",
     "Next.js",
-    "TypeScript",
+    "JavaScript",
     "Node.js",
     "MongoDB",
     "Tailwind CSS",
@@ -27,8 +27,8 @@ export const aboutText =
 export const heroBio =
     "Building software with clarity, purpose, and craft.";
 
-export const heroQuote ={
-    text: "To go wrong in one's own way is better than to go right in someone else's.",
+export const heroQuote = {
+    text: "Above all, don't lie to yourself.",
     author: "Fyodor Dostoevsky",
 } as const;
 

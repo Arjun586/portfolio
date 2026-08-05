@@ -1,338 +1,406 @@
 export type ProjectFilterId =
-| "all"
-| "featured"
-| "full-stack"
-| "backend"
-| "hackathon"
-| "frontend";
+    | "all"
+    | "featured"
+    | "full-stack"
+    | "backend"
+    | "hackathon"
+    | "frontend";
 
 export type ProjectCategory =
-| "full-stack"
-| "backend"
-| "frontend"
-| "hackathon";
+    | "full-stack"
+    | "backend"
+    | "frontend"
+    | "hackathon";
 
 export type Project = {
-id: string;
-number: string;
+    id: string;
+    number: string;
 
-title: string;
-description: string;
+    title: string;
+    description: string;
 
-category: string;
-categoryIds: ProjectCategory[];
+    category: string;
+    categoryIds: ProjectCategory[];
 
-featured: boolean;
+    featured: boolean;
 
-thumbnail: string;
+    thumbnail: string;
 
-githubUrl?: string;
-liveUrl?: string;
+    githubUrl?: string;
+    liveUrl?: string;
 
-technologies: string[];
+    technologies: string[];
 
-contribution?: string;
+    contribution?: string;
 
-status: "Completed" | "Hackathon";
+    status: "Completed" | "Hackathon";
 
 };
 
 export const projectFilters: {
-id: ProjectFilterId;
-label: string;
+    id: ProjectFilterId;
+    label: string;
 }[] = [
-{ id: "all", label: "ALL" },
-{ id: "featured", label: "FEATURED" },
-{ id: "full-stack", label: "FULL STACK" },
-{ id: "backend", label: "BACKEND" },
-{ id: "hackathon", label: "HACKATHON" },
-{ id: "frontend", label: "FRONTEND" },
-];
+        { id: "all", label: "ALL" },
+        { id: "featured", label: "FEATURED" },
+        { id: "full-stack", label: "FULL STACK" },
+        { id: "backend", label: "BACKEND" },
+        { id: "hackathon", label: "HACKATHON" },
+        { id: "frontend", label: "FRONTEND" },
+    ];
 
 export const projectsHero = {
-label: "MY WORK",
-title: "PROJECTS",
-subtitle:
-"A collection of full-stack applications, backend systems, hackathon projects, and developer tools built while exploring software engineering and modern web technologies.",
-metadata:
-"FULL-STACK DEVELOPMENT • BACKEND SYSTEMS • REAL-TIME APPLICATIONS",
+    label: "MY WORK",
+    title: "PROJECTS",
+    subtitle:
+        "A collection of full-stack applications, backend systems, hackathon projects, and developer tools built while exploring software engineering and modern web technologies.",
+    metadata:
+        "FULL-STACK DEVELOPMENT • BACKEND SYSTEMS • REAL-TIME APPLICATIONS",
 } as const;
 
 export const allProjects: Project[] = [
-{
-id: "replayos",
-number: "01",
+    {
+        id: "nexus",
+        number: "01",
 
+        title: "NEXUS",
 
-    title: "REPLAYOS",
+        description:
+            "Real-time collaborative infinite whiteboard inspired by the engineering challenges behind Figma and Miro. Built with CRDT-based synchronization using Yjs and Hocuspocus, enabling multiple users to draw, edit, and collaborate on a shared canvas with conflict-free state synchronization.",
 
-    description:
-        "Developer observability platform that transforms logs, traces, and incidents into visual timelines, enabling faster debugging and root-cause analysis.",
+        category: "FULL STACK",
+        categoryIds: ["full-stack"],
 
-    category: "FULL STACK",
-    categoryIds: ["full-stack"],
+        featured: true,
 
-    featured: true,
+        thumbnail: "/projects/nexus.png",
 
-    thumbnail: "/projects/replayos.png",
+        githubUrl: "https://github.com/Arjun586/Nexus",
 
-    githubUrl: "https://github.com/Arjun586/ReplayOS",
+        liveUrl: "https://nexus-tan-eta.vercel.app/",
 
-    technologies: [
-        "React",
-        "TypeScript",
-        "Node.js",
-        "Express",
-        "PostgreSQL",
-        "Prisma",
-        "Redis",
-        "BullMQ",
-        "JWT",
-        "RBAC",
-    ],
+        technologies: [
+            "React",
+            "TypeScript",
+            "Node.js",
+            "Express",
+            "PostgreSQL",
+            "Prisma",
+            "Redis",
+            "Yjs",
+            "Hocuspocus",
+            "tldraw",
+            "Docker",
+            "Tailwind CSS",
+            "Zod",
+            "JWT",
+        ],
 
-    status: "Completed",
-},
+        status: "Completed",
+    },
 
-{
-    id: "kmrl",
-    number: "02",
+    {
+        id: "rate-limiter",
+        number: "02",
 
-    title: "KMRL",
+        title: "RATE LIMITER",
 
-    description:
-        "Intelligent document processing platform that classifies, routes, and interprets documents while connecting policies, approvals, and workflows in real time.",
+        description:
+            "Backend infrastructure library implementing six rate limiting algorithms from scratch with a unified API, Factory Pattern, reusable Express middleware, custom data structures, and comprehensive automated testing.",
 
-    category: "FULL STACK",
-    categoryIds: ["full-stack"],
+        category: "BACKEND",
+        categoryIds: ["backend"],
 
-    featured: true,
+        featured: true,
 
-    thumbnail: "/projects/kmrl.png",
+        thumbnail: "/projects/rate-limiter.png",
 
-    technologies: [
-        "React",
-        "TypeScript",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "WebSockets",
-        "LangChain",
-        "Gemini",
-        "n8n",
-    ],
+        githubUrl: "https://github.com/Arjun586/rate-limiter",
 
-    contribution:
-        "Developed WebSocket communication, backend services using Node.js and Express, and MongoDB integrations.",
+        technologies: [
+            "JavaScript",
+            "Node.js",
+            "Express",
+            "Vitest",
+            "Factory Pattern",
+            "Algorithms",
+            "Data Structures",
+        ],
 
-    status: "Completed",
-},
+        status: "Completed",
+    },
 
-{
-    id: "resq360",
-    number: "03",
+    {
+        id: "replayos",
+        number: "03",
 
-    title: "RESQ360",
+        title: "REPLAYOS",
 
-    description:
-        "Emergency response platform that combines real-time alerts, community reporting, and safety resources to improve crisis coordination.",
+        description:
+            "Developer observability platform that transforms logs, traces, and incidents into visual timelines, enabling faster debugging and root-cause analysis.",
 
-    category: "HACKATHON",
-    categoryIds: ["hackathon"],
+        category: "FULL STACK",
+        categoryIds: ["full-stack"],
 
-    featured: true,
+        featured: true,
 
-    thumbnail: "/projects/resq360.png",
+        thumbnail: "/projects/replayos.png",
 
-    githubUrl:
-        "https://github.com/Arjun586/RESQ360-hacknovate",
+        githubUrl: "https://github.com/Arjun586/ReplayOS",
 
-    technologies: [
-        "React",
-        "TypeScript",
-        "Firebase",
-        "Firestore",
-        "Gemini API",
-        "Tailwind",
-    ],
+        technologies: [
+            "React",
+            "TypeScript",
+            "Node.js",
+            "Express",
+            "PostgreSQL",
+            "Prisma",
+            "Redis",
+            "BullMQ",
+            "JWT",
+            "RBAC",
+        ],
 
-    status: "Hackathon",
-},
+        status: "Completed",
+    },
 
-{
-    id: "studynotion",
-    number: "04",
+    {
+        id: "kmrl",
+        number: "04",
 
-    title: "STUDYNOTION",
+        title: "KMRL",
 
-    description:
-        "EdTech platform where students purchase and consume courses while instructors create, manage, and analyze educational content.",
+        description:
+            "Intelligent document processing platform that classifies, routes, and interprets documents while connecting policies, approvals, and workflows in real time.",
 
-    category: "FULL STACK",
-    categoryIds: ["full-stack"],
+        category: "FULL STACK",
+        categoryIds: ["full-stack"],
 
-    featured: true,
+        featured: true,
 
-    thumbnail: "/projects/studynotion.png",
+        thumbnail: "/projects/kmrl.png",
 
-    githubUrl:
-        "https://github.com/Arjun586/studynotion",
+        technologies: [
+            "React",
+            "TypeScript",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "WebSockets",
+            "LangChain",
+            "Gemini",
+            "n8n",
+        ],
 
-    technologies: [
-        "React",
-        "Redux Toolkit",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "JWT",
-        "Tailwind",
-    ],
+        contribution:
+            "Developed WebSocket communication, backend services using Node.js and Express, and MongoDB integrations.",
 
-    status: "Completed",
-},
+        status: "Completed",
+    },
 
-{
-    id: "verichain",
-    number: "05",
+    {
+        id: "studynotion",
+        number: "05",
 
-    title: "VERICHAIN",
+        title: "STUDYNOTION",
 
-    description:
-        "Blockchain-powered property verification system that converts physical assets into secure, verifiable digital records.",
+        description:
+            "EdTech platform where students purchase and consume courses while instructors create, manage, and analyze educational content.",
 
-    category: "BACKEND • HACKATHON",
-    categoryIds: ["backend", "hackathon"],
+        category: "FULL STACK",
+        categoryIds: ["full-stack"],
 
-    featured: false,
+        featured: true,
 
-    thumbnail: "/projects/verichain.png",
+        thumbnail: "/projects/studynotion.png",
 
-    githubUrl:
-        "https://github.com/aryan-saini-dev/Verichain-Property_Transfer_Using_Blockchain",
+        githubUrl:
+            "https://github.com/Arjun586/studynotion",
 
-    technologies: [
-        "Blockchain",
-        "NFT",
-        "Property Verification",
-    ],
+        technologies: [
+            "React",
+            "Redux Toolkit",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "JWT",
+            "Tailwind",
+        ],
 
-    status: "Hackathon",
-},
+        status: "Completed",
+    },
 
-{
-    id: "chat-app",
-    number: "06",
+    {
+        id: "resq360",
+        number: "06",
 
-    title: "CHAT APP",
+        title: "RESQ360",
 
-    description:
-        "Real-time messaging application featuring instant communication, authentication, and scalable client-server architecture.",
+        description:
+            "Emergency response platform that combines real-time alerts, community reporting, and safety resources to improve crisis coordination.",
 
-    category: "FULL STACK",
-    categoryIds: ["full-stack"],
+        category: "HACKATHON",
+        categoryIds: ["hackathon"],
 
-    featured: false,
+        featured: true,
 
-    thumbnail: "/projects/chat-app.png",
+        thumbnail: "/projects/resq360.png",
 
-    githubUrl:
-        "https://github.com/Arjun586/chat-app",
+        githubUrl:
+            "https://github.com/Arjun586/RESQ360-hacknovate",
 
-    technologies: [
-        "React",
-        "Node.js",
-        "Express",
-        "Socket.io",
-        "MongoDB",
-        "JWT",
-    ],
+        technologies: [
+            "React",
+            "TypeScript",
+            "Firebase",
+            "Firestore",
+            "Gemini API",
+            "Tailwind",
+        ],
 
-    status: "Completed",
-},
+        status: "Hackathon",
+    },
 
-{
-    id: "video-backend",
-    number: "07",
+    {
+        id: "verichain",
+        number: "07",
 
-    title: "VIDEO BACKEND",
+        title: "VERICHAIN",
 
-    description:
-        "Production-style backend inspired by modern video platforms, featuring authentication, subscriptions, comments, likes, and media management.",
+        description:
+            "Blockchain-powered property verification system that converts physical assets into secure, verifiable digital records.",
 
-    category: "BACKEND",
-    categoryIds: ["backend"],
+        category: "BACKEND • HACKATHON",
+        categoryIds: ["backend", "hackathon"],
 
-    featured: false,
+        featured: false,
 
-    thumbnail: "/projects/video-backend.png",
+        thumbnail: "/projects/verichain.png",
 
-    githubUrl:
-        "https://github.com/Arjun586/full_backend",
+        githubUrl:
+            "https://github.com/aryan-saini-dev/Verichain-Property_Transfer_Using_Blockchain",
 
-    technologies: [
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Mongoose",
-        "JWT",
-        "Bcrypt",
-    ],
+        technologies: [
+            "Blockchain",
+            "NFT",
+            "Property Verification",
+        ],
 
-    status: "Completed",
-},
+        status: "Hackathon",
+    },
 
-{
-    id: "advanced-event-studio",
-    number: "08",
+    {
+        id: "chat-app",
+        number: "08",
 
-    title: "ADVANCED EVENT STUDIO",
+        title: "CHAT APP",
 
-    description:
-        "Interactive JavaScript playground designed to explore modern DOM events, event delegation, and real-world event-driven UI patterns.",
+        description:
+            "Real-time messaging application featuring instant communication, authentication, and scalable client-server architecture.",
 
-    category: "FRONTEND",
-    categoryIds: ["frontend"],
+        category: "FULL STACK",
+        categoryIds: ["full-stack"],
 
-    featured: false,
+        featured: false,
 
-    thumbnail: "/projects/advanced-event-studio.png",
+        thumbnail: "/projects/chat-app.png",
 
-    githubUrl:
-        "https://github.com/Arjun586/advance-event-studio",
+        githubUrl:
+            "https://github.com/Arjun586/chat-app",
 
-    technologies: [
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "DOM Events",
-    ],
+        technologies: [
+            "React",
+            "Node.js",
+            "Express",
+            "Socket.io",
+            "MongoDB",
+            "JWT",
+        ],
 
-    status: "Completed",
-},
+        status: "Completed",
+    },
 
+    {
+        id: "video-backend",
+        number: "09",
 
+        title: "VIDEO BACKEND",
+
+        description:
+            "Production-style backend inspired by modern video platforms, featuring authentication, subscriptions, comments, likes, and media management.",
+
+        category: "BACKEND",
+        categoryIds: ["backend"],
+
+        featured: false,
+
+        thumbnail: "/projects/video-backend.png",
+
+        githubUrl:
+            "https://github.com/Arjun586/full_backend",
+
+        technologies: [
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "Mongoose",
+            "JWT",
+            "Bcrypt",
+        ],
+
+        status: "Completed",
+    },
+
+    {
+        id: "advanced-event-studio",
+        number: "10",
+
+        title: "ADVANCED EVENT STUDIO",
+
+        description:
+            "Interactive JavaScript playground designed to explore modern DOM events, event delegation, and real-world event-driven UI patterns.",
+
+        category: "FRONTEND",
+        categoryIds: ["frontend"],
+
+        featured: false,
+
+        thumbnail: "/projects/advanced-event-studio.png",
+
+        githubUrl:
+            "https://github.com/Arjun586/advance-event-studio",
+
+        technologies: [
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "DOM Events",
+        ],
+
+        status: "Completed",
+    },
 ];
 
 export const featuredProjects = allProjects.filter(
-(project) => project.featured,
+    (project) => project.featured,
 );
 
 export function filterProjects(
-projects: Project[],
-filterId: ProjectFilterId,
+    projects: Project[],
+    filterId: ProjectFilterId,
 ): Project[] {
-if (filterId === "all") {
-return projects;
-}
+    if (filterId === "all") {
+        return projects;
+    }
 
 
-if (filterId === "featured") {
-    return projects.filter((project) => project.featured);
-}
+    if (filterId === "featured") {
+        return projects.filter((project) => project.featured);
+    }
 
-return projects.filter((project) =>
-    project.categoryIds.includes(filterId as ProjectCategory),
-);
+    return projects.filter((project) =>
+        project.categoryIds.includes(filterId as ProjectCategory),
+    );
 
 
 }

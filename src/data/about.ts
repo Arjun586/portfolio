@@ -6,8 +6,8 @@ export const aboutHero = {
 } as const;
 
 export const aboutHeroQuote = {
-    text: "The soul becomes dyed with the color of its thoughts.",
-    author: "Marcus Aurelius",
+    text: "He who has a why to live for can bear almost any how.",
+    author: "Friedrich Nietzsche",
 } as const;
 
 export const journey = [

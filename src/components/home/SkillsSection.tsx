@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const frontend = ["TypeScript", "React.js", "Next.js"];
-const backend  = ["Node.js", "Express.js", "Prisma"];
+const frontend = ["JavaScript", "React.js", "Next.js"];
+const backend = ["Node.js", "Express.js",];
 const database = ["MongoDB", "PostgreSQL"];
-const tools    = ["Git", "Docker", "AWS"];
+const tools = ["Git", "Docker", "AWS"];
 
 function TagList({ items }: { items: string[] }) {
     return (
