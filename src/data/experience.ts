@@ -13,28 +13,28 @@ export const growthTimeline = [
         title: "ENGINEERING & INFRASTRUCTURE",
         bullets: ["Docker", "CI/CD Pipelines", "Deployment Workflows", "System Design"],
         description:
-            "Exploring modern infrastructure, automation, deployment, and software engineering practices.",
+            "Exploring infrastructure, automation, and modern engineering practices.",
     },
     {
         period: "2025 – 2026",
         title: "BACKEND & SYSTEMS",
         bullets: ["Node.js & Express", "PostgreSQL & Prisma", "Authentication & Authorization", "REST APIs"],
         description:
-            "Focused on backend engineering, APIs, databases, and scalable application architecture.",
+            "Focused on backend engineering, APIs, and scalable architecture.",
     },
     {
         period: "2024 – 2025",
         title: "FULL-STACK DEVELOPMENT",
         bullets: ["React & TypeScript", "MERN Applications", "State Management", "Responsive Interfaces"],
         description:
-            "Expanded into full-stack development while building larger and more complex web applications.",
+            "Expanded into full-stack development, building larger and more complex applications.",
     },
     {
         period: "2023 – 2024",
         title: "FOUNDATIONS",
         bullets: ["HTML & CSS", "JavaScript", "Git & GitHub", "Programming Fundamentals"],
         description:
-            "Built my first websites and established a strong foundation in web development and programming.",
+            "Built my first websites and established a foundation in web development.",
     },
 ] as const;
 
