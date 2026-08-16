@@ -7,21 +7,21 @@ export const contactHero = {
 } as const;
 
 export const contactHeroQuote = {
-    text: "So we beat on, boats against the current.",
-    author: "F. Scott Fitzgerald",
+    text: "No man is an island.",
+    author: "John Donne",
 } as const;
 
 export const contactDetails = [
-    { label: "EMAIL",         value: "arjunofficial586@gmail.com",     icon: "mail"     as const },
-    { label: "LOCATION",      value: "India",                   icon: "location" as const },
-    { label: "RESPONSE TIME", value: "Usually within 24 hours", icon: "clock"    as const },
+    { label: "EMAIL", value: "arjunofficial586@gmail.com", icon: "mail" as const },
+    { label: "LOCATION", value: "India", icon: "location" as const },
+    { label: "RESPONSE TIME", value: "Usually within 24 hours", icon: "clock" as const },
 ] as const;
 
 export const socialLinks = [
-    { label: "GitHub",   href: "https://github.com/Arjun586",          icon: "github"   as const },
+    { label: "GitHub", href: "https://github.com/Arjun586", icon: "github" as const },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/arjun586", icon: "linkedin" as const },
-    { label: "X",        href: "https://x.com/Arjun88823705",          icon: "x"        as const },
-    { label: "Email",    href: "mailto:arjunofficial586@gmail.com",    icon: "mail"     as const },
+    { label: "X", href: "https://x.com/Arjun88823705", icon: "x" as const },
+    { label: "Email", href: "mailto:arjunofficial586@gmail.com", icon: "mail" as const },
 ] as const;
 
 export const availableFor = [

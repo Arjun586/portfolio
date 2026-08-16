@@ -29,9 +29,14 @@ export function HeroSection() {
                     {heroBio}
                 </p>
 
-                <Link to="/projects" className="mt-6 inline-block w-fit xl:mt-8">
-                    <Button>VIEW MY WORK</Button>
-                </Link>
+                <div className="mt-6 flex flex-wrap items-center gap-3 xl:mt-8">
+                    <Link to="/projects" className="inline-block w-fit">
+                        <Button>VIEW MY WORK</Button>
+                    </Link>
+                    <a href="/resume.pdf" download className="inline-block w-fit">
+                        <Button showArrow={false}>DOWNLOAD RESUME</Button>
+                    </a>
+                </div>
             </div>
 
             <PortraitImage alt="Arjun" />
