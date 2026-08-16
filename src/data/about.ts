@@ -31,7 +31,7 @@ export const aboutContent = {
 } as const;
 
 export const outsideTheCode = {
-    text: "Outside of development, I spend time reading fiction and philosophy, and generally following whatever I'm curious about at the moment.",
+    text: "Outside of development, I spend time reading fiction, and generally following whatever I'm curious about at the moment.",
     currentlyReading: {
         title: "The Brothers Karamazov",
         author: "Fyodor Dostoevsky",

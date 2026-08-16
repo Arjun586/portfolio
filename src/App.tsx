@@ -10,7 +10,6 @@ const Projects = lazy(() => import("./pages/Projects"));
 const Experience = lazy(() => import("./pages/Experience"));
 const Skills = lazy(() => import("./pages/Skills"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Resume = lazy(() => import("./pages/Resume"));
 
 function App() {
     return (
@@ -24,7 +23,6 @@ function App() {
                         <Route path="projects" element={<Projects />} />
                         <Route path="experience" element={<Experience />} />
                         <Route path="skills" element={<Skills />} />
-                        <Route path="resume" element={<Resume />} />
                         <Route path="contact" element={<Contact />} />
                     </Route>
                 </Routes>

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import { aboutHero, aboutHeroQuote } from "../../data/about";
+import { resumeUrl } from "../../data/home";
 import { Button } from "../ui/Button";
 import { HeroQuoteColumn } from "../ui/HeroQuoteColumn";
 import { PortraitImage } from "../ui/PortraitImage";
@@ -28,9 +28,14 @@ export function AboutHero() {
                     {aboutHero.bio}
                 </p>
 
-                <Link to="/resume" className="mt-6 inline-block w-fit xl:mt-8">
+                <a
+                    href={resumeUrl.view}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-block w-fit xl:mt-8"
+                >
                     <Button>VIEW RESUME</Button>
-                </Link>
+                </a>
             </div>
 
             <PortraitImage alt="Arjun" />

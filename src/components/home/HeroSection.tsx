@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { heroBio, heroQuote } from "../../data/home";
+import { heroBio, heroQuote, resumeUrl } from "../../data/home";
 import { Button } from "../ui/Button";
 import { HeroQuoteColumn } from "../ui/HeroQuoteColumn";
 import { PortraitImage } from "../ui/PortraitImage";
@@ -33,8 +33,13 @@ export function HeroSection() {
                     <Link to="/projects" className="inline-block w-fit">
                         <Button>VIEW MY WORK</Button>
                     </Link>
-                    <a href="/resume.pdf" download className="inline-block w-fit">
-                        <Button showArrow={false}>DOWNLOAD RESUME</Button>
+                    <a
+                        href={resumeUrl.view}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block w-fit"
+                    >
+                        <Button>VIEW RESUME</Button>
                     </a>
                 </div>
             </div>

@@ -37,3 +37,9 @@ export const footerCta = {
     description:
         "Have a project in mind or want to collaborate? I'm always open to discussing new opportunities.",
 } as const;
+
+export const resumeUrl = {
+    view: "https://drive.google.com/file/d/1xThOTN_ON7sPhgO8KsAP6aWWxzfDCMxw/view?usp=sharing",
+    download: "https://drive.google.com/uc?export=download&id=1xThOTN_ON7sPhgO8KsAP6aWWxzfDCMxw",
+} as const;
+
